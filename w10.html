@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W10 普通驗光流程總覽｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body data-chapter="w10">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 10</div>
+    <h1>普通驗光流程總覽</h1>
+    <div class="en">Routine Distance Subjective Refraction</div>
+    <p class="lede">驗光是一門包含<b>心理引導技巧</b>與<b>問題識別</b>的解決方式。後半學期從這張地圖出發：<b>單眼四步</b>（初始 MPMVA → 初始紅綠 → JCC → 第二次 MPMVA）、<b>雙眼三步</b>（雙眼平衡 → 雙眼 MPMVA → 主利眼與試戴）。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>說出起始點的設置、流程的修正、處方的決定各自負責什麼。</li>
+      <li>列出十三項初步檢查，並知道每一項提供什麼判斷資訊。</li>
+      <li>完整背出從初始 MPMVA 到雙眼 MPMVA 的七個步驟。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">Starting points</span><h3>四種起點</h3><p>① <b>自動驗光機</b>：快，但易受調節干擾而偏負。② <b>靜態檢影</b>：客觀、不需回答，最可靠。③ <b>舊處方</b>：反映已適應的狀態，但可能過時。④ <b>鐘面圖</b>：不需儀器（第 11 週）。起點只是「開始的地方」，不是答案。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">0.75 D rule</span><h3>起點差太多怎麼辦</h3><p>四種起點的結果差異<b>超過 0.75 D</b>，代表至少一項有誤，應<b>回頭確認</b>，而不是直接取平均。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Monocular × 4</span><h3>單眼四步驟</h3><p>① 初始 MPMVA（靜態檢影總量起，霧視到 20/40～20/60 再收回）② 初始紅綠（MPMVA 的終點確認）③ JCC（散光軸與度數）④ 第二次 MPMVA（散光改了，球面要跟著再確認）。右眼做完換左眼。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Binocular × 3</span><h3>雙眼三步驟</h3><p>⑤ <b>雙眼平衡</b>：讓兩眼調節相等（第 15 週）。⑥ <b>雙眼 MPMVA</b>：雙眼最佳視力且保有最大正，<b>不超過最佳視力多 −0.25</b>。⑦ <b>主利眼確認與試戴</b>（第 16 週）。</p></div>
+      <div class="concept"><span class="en-term">Dominant eye</span><h3>主利眼測試</h3><p>雙手伸直、雙眼打開，透過小窗口看目標。<b>遮右眼仍看得到 → 主利眼是左眼</b>，反之亦然。兩邊各一半時，請病人把窗口縮小重測。用途：無法完全平衡時，把稍微清楚的留給主利眼。</p></div>
+      <div class="concept"><span class="en-term">Shared rules</span><h3>每一步共同的原則</h3><p>最大正、<b>不追感覺</b>（「感覺更好」不能當作給度數的理由）、鼓勵讀更小一行。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 10-1</span><h3>七步驟排序</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim"><div id="o101"></div><div style="margin-top:10px"><b>每一步在確認什麼？</b></div><div id="d101"></div></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 10-2</span><h3>十三項初步檢查</h3></div>
+      <div class="sim" id="d102"></div>
+      <div class="observe"><h4>十三項</h4><ul><li>外部檢查、視力、推進式調節幅度、色彩視覺、遮蓋測試、立體視覺、調節近點、聚合近點 NPC、赫斯伯格檢測、眼外肌 EOM、瞳孔檢查、視野檢查、瞳孔間距離 PD。</li></ul></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 10-3</span><h3>四種起點：該相信誰？</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="sim" style="align-content:start">
+          <div class="rxgrid" style="grid-template-columns: 110px repeat(2, minmax(0,1fr))"><b>起點</b><b>球面</b><b>柱面</b>
+            <b>自動驗光</b><input id="sp-ar-s" value="-3.00"><input id="sp-ar-c" value="-0.75">
+            <b>靜態檢影</b><input id="sp-rt-s" value="-2.25"><input id="sp-rt-c" value="-0.50">
+            <b>舊處方</b><input id="sp-ol-s" value="-2.00"><input id="sp-ol-c" value="-0.50">
+            <b>鐘面圖</b><input id="sp-cd-s" value="-2.25"><input id="sp-cd-c" value="-0.50"></div>
+          <div class="svgstage" id="sp-svg"></div>
+        </div></div>
+        <div class="lab-panel">
+          <div class="readout"><div class="row"><span>等價球面最大差</span><b id="sp-d">—</b></div></div>
+          <div class="verdict" id="sp-v"></div>
+          <div class="row-btns"><button class="btn ghost" id="sp-n" type="button">換一組數據</button></div>
+        </div>
+      </div>
+      <div class="observe"><h4>觀察重點</h4><ul><li>自動驗光比其他起點都負？最常見的原因是調節介入（年輕人、假性近視）。</li><li>舊處方明顯不同？問問是幾年前配的。</li></ul></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 10-4</span><h3>流程錯誤診斷</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim" id="d104"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>完整操作一次 <span class="tag">SIMULATOR</span></h2>
+    <a class="sim-link" id="ph-go" href="#"><span class="sim-ic"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="10" cy="17" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="17" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 17h0" stroke="currentColor" stroke-width="2"/></svg></span><span class="sim-txt"><small>PHOROPTER SIMULATOR</small><b>綜合驗光儀模擬</b><span>「視光學臨床實驗台」的模擬器：引導模式會一路帶你做到雙眼平衡，和本週的七步驟一一對應。</span></span><span class="sim-go">開始操作 →</span></a>
+  </section>
+
+  <section class="block">
+    <h2>紀錄方式 <span class="tag">RECORD</span></h2>
+    <div class="rec"># 正常範例
+Dry Ret:  OD −2.00 −0.50 ×180   OS −1.75 −0.75 ×175
+1st MPMVA: OD −2.25 DS (VA 0.8)  → 紅綠 balanced
+JCC:      OD −2.25 −0.50 ×178
+2nd MPMVA: OD −2.25 −0.50 ×178  VA 1.0
+BVA:      OD −2.25 −0.50 ×178  OS −2.00 −0.75 ×172  OU 1.2   Dominant: OD
+※ 必填：起點來源、每一階段的度數與視力、雙眼平衡方式、主利眼</div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w10.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w10", ["從初步檢查一路做到雙眼 MPMVA，完整串接一次", "主利眼測試（雙手小窗口法）", "帶著紀錄單回來，用 LAB 10-4 找自己流程中的錯"]); });</script>
+<script>
+(function () {
+  const { order, drill, fmt } = OL;
+  OL.levels("levels", [
+    ["◆", "七步驟：單眼四步、雙眼三步", "右眼完再左眼"],
+    ["◆", "四種起點與 0.75 D 原則", "差太多回頭查，不取平均"],
+    ["◆", "十三項初步檢查各提供什麼", ""],
+    ["○", "主利眼測試", "遮右仍看得到 → 左眼主利"],
+  ]);
+  const ph = (window.OB_CONFIG.tools || {}).phoropter; const go = document.getElementById("ph-go"); if (ph) go.href = ph; else go.hidden = true;
+
+  order("o101", ["① 初始 MPMVA", "② 初始紅綠檢查", "③ 傑克森交叉圓柱鏡 JCC", "④ 第二次 MPMVA", "⑤ 雙眼平衡", "⑥ 雙眼 MPMVA", "⑦ 主利眼確認與試戴"], { first: "最先", last: "最後" });
+  drill("d101", ["① 初始 MPMVA", "② 初始紅綠", "③ JCC", "④ 第二次 MPMVA", "⑤ 雙眼平衡", "⑥ 雙眼 MPMVA", "⑦ 主利眼與試戴"], [
+    { q: "從檢影總量開始霧視，找出最正的球面。", a: 0, why: "初始 MPMVA。" },
+    { q: "確認球面度數是否正確，作為初始 MPMVA 的終點。", a: 1, why: "初始紅綠。" },
+    { q: "修正散光的軸與度數。", a: 2, why: "JCC（第 12、13 週）。" },
+    { q: "散光改變後，再確認一次最大正球面。", a: 3, why: "第二次 MPMVA。" },
+    { q: "使雙眼的視覺刺激引起的調節相等。", a: 4, why: "雙眼平衡（第 15 週）。" },
+    { q: "雙眼同時看時的最佳視力，但不超過最佳視力多 −0.25。", a: 5, why: "雙眼 MPMVA。" },
+    { q: "在試鏡架上體驗最終處方。", a: 6, why: "主利眼確認與試戴（第 16 週）。" },
+  ], { unit: "這一步" });
+
+  drill("d102", ["外部檢查", "推進式調節幅度", "色彩視覺", "遮蓋測試", "立體視覺", "聚合近點 NPC", "赫斯伯格檢測", "眼外肌 EOM", "瞳孔檢查", "視野檢查", "瞳孔間距離 PD"], [
+    { q: "想知道有沒有斜視（tropia）或隱斜視（phoria）。", a: 3, why: "遮蓋測試。" },
+    { q: "看角膜反光點是否對稱。", a: 6, why: "赫斯伯格（Hirschberg）。" },
+    { q: "看六個注視方向的眼球運動。", a: 7, why: "EOM。" },
+    { q: "鏡片光學中心要放在哪裡。", a: 10, why: "PD。" },
+    { q: "雙眼能內聚到多近。", a: 5, why: "NPC。" },
+    { q: "明暗下瞳孔大小與對光反應。", a: 8, why: "瞳孔檢查。" },
+    { q: "先天或後天的色覺異常。", a: 2, why: "色彩視覺。" },
+    { q: "雙眼視功能的最高階段是否建立。", a: 4, why: "立體視覺。" },
+    { q: "周邊有沒有缺損。", a: 9, why: "視野檢查。" },
+    { q: "眼瞼、睫毛、結膜、虹膜的外觀。", a: 0, why: "外部檢查。" },
+    { q: "Amp. of Acc.，和年齡期望值比較。", a: 1, why: "推進式調節幅度（第 6 週）。" },
+  ], { unit: "我想知道" });
+
+  /* ---------- LAB 10-3 ---------- */
+  const ids = ["ar", "rt", "ol", "cd"], names = ["自動驗光", "靜態檢影", "舊處方", "鐘面圖"];
+  const P = (v) => parseFloat(String(v).replace(/[−–]/g, "-"));
+  function d3() {
+    const se = ids.map((k) => P(document.getElementById(`sp-${k}-s`).value) + P(document.getElementById(`sp-${k}-c`).value) / 2);
+    const mx = Math.max(...se), mn = Math.min(...se), d = mx - mn;
+    const W = 420, H = 150, X = (v) => 40 + (v - (mn - 0.5)) / (d + 1) * 340;
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="四種起點的等價球面"><line x1="40" y1="70" x2="380" y2="70" stroke="var(--line)" stroke-width="2"/>`;
+    se.forEach((v, i) => { s += `<circle cx="${X(v)}" cy="70" r="7" fill="${["var(--ray)", "var(--accent)", "var(--ray-2)", "var(--ray-3)"][i]}"/><text x="${X(v)}" y="${[30, 48, 102, 120][i]}" text-anchor="middle" font-size="10" fill="var(--ink)">${names[i]} ${fmt.s(v)}</text>`; });
+    document.getElementById("sp-svg").innerHTML = s + `<text x="210" y="140" text-anchor="middle" font-size="11" fill="var(--muted)">等價球面（負的在左）</text></svg>`;
+    document.getElementById("sp-d").textContent = isFinite(d) ? d.toFixed(2) + " D" : "—";
+    const arMost = se[0] === mn && se[0] < Math.min(se[1], se[2], se[3]) - 0.4;
+    document.getElementById("sp-v").innerHTML = !isFinite(d) ? "" : d > 0.75 ? `<span class="pill bad">差異 > 0.75 D</span> 至少一項有誤：回頭確認，不要取平均。${arMost ? "自動驗光明顯偏負 → 懷疑調節介入，以靜態檢影為起點。" : ""}` : '<span class="pill ok">一致</span> 可以從最可靠的靜態檢影開始。';
+  }
+  ids.forEach((k) => ["s", "c"].forEach((x) => document.getElementById(`sp-${k}-${x}`).addEventListener("input", d3)));
+  const SETS = [[[-3, -0.75], [-2.25, -0.5], [-2, -0.5], [-2.25, -0.5]], [[-1.25, -0.5], [-1.25, -0.5], [-1, -0.5], [-1.25, -0.75]], [[-4.5, -1], [-4.25, -1], [-2.5, -0.5], [-4.25, -1.25]], [[0.25, -0.25], [1.25, 0], [1, 0], [1.25, -0.25]]];
+  let si = 0;
+  document.getElementById("sp-n").onclick = () => { si = (si + 1) % SETS.length; ids.forEach((k, i) => { document.getElementById(`sp-${k}-s`).value = fmt.s(SETS[si][i][0]); document.getElementById(`sp-${k}-c`).value = fmt.s(SETS[si][i][1]); }); d3(); };
+  d3();
+
+  drill("d104", ["跳過霧視", "JCC 後沒做第二次 MPMVA", "單眼沒做完就進雙眼", "雙眼平衡霧視不足", "雙眼 MPMVA 過矯", "沒確認主利眼"], [
+    { q: "學生直接從自動驗光 −3.00 開始一格一格減負，最後給 −3.25，病人戴了頭痛。", a: 0, why: "調節沒放鬆，整條流程建立在錯誤起點上。" },
+    { q: "JCC 把柱鏡從 −0.50 調到 −1.00，球面沒再確認就開處方。", a: 1, why: "散光改了，球面要再做一次 MPMVA。" },
+    { q: "右眼做完 MPMVA，左眼還沒做 JCC 就開始稜鏡分離。", a: 2, why: "單眼結果不可靠，雙眼平衡失去意義。" },
+    { q: "稜鏡分離時病人說兩行都很清楚，分不出來。", a: 3, why: "兩眼都太清楚，無法比較模糊程度：先霧視到 20/25 或更差。" },
+    { q: "雙眼 MPMVA 一路加到 −0.75，病人說字變小變黑。", a: 4, why: "不超過最佳視力多 −0.25。" },
+    { q: "兩眼怎麼調都差一點點，學生隨便讓左眼稍清楚。", a: 5, why: "無法平衡時，要把稍微清楚留給主利眼。" },
+  ], { unit: "個案" });
+})();
+</script>
+</body>
+</html>

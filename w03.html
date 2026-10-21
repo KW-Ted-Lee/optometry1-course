@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W03 各視標系統的換算｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body data-chapter="w03">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 03</div>
+    <h1>各視標系統的換算</h1>
+    <div class="en">MAR, LogMAR, Grating Acuity, N-scale &amp; M-units</div>
+    <p class="lede">同一個視力有很多種寫法。記住三條換算式就夠了：<b>MAR ＝ 1 ÷ 小數視力</b>、<b>LogMAR ＝ log(MAR)</b>、<b>VA ＝ m ÷ M（小 m 除大 M）</b>。再加一個必背數字：6 公尺的 1.0 視標高 <b>8.73 mm</b>。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>說出可辨認性、大小與距離、對比度、一致性四項視標設計要求。</li>
+      <li>完成小數視力、Snellen 分數、MAR 與 LogMAR 四者的互換計算。</li>
+      <li>運用 m / M ＝ VA 完成 M-unit 換算，並認識 N-scale 與條紋視力。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">Optotype design</span><h3>好視標的四件事</h3><p>① <b>可辨認性</b>：形狀明確、邊緣清晰（Snellen、Landolt 環、Tumbling E、Lea）。② <b>大小與距離</b>：以弧分表達，最小細節占 1 弧分、整字 5 弧分。③ <b>對比度</b>：臨床通常 90% 以上。④ <b>形狀一致</b>：所有視標比例相同。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">Optotype height</span><h3>視標高度 h ＝ d × tan θ</h3><p>6 公尺、5 弧分（5/60 ＝ 0.0833°）→ h ＝ 6 × tan 0.0833° ＝ <b>8.73 mm</b>，就是 1.0 的視標高。1 公尺、5 弧分 → <b>1.45 mm</b>，就是 1 M 的定義。<b>高度與距離成正比</b>。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">MAR</span><h3>最小分辨角</h3><p>人眼能分辨兩點的最小視角，單位弧分。<b>MAR ＝ 1 ÷ 小數視力</b>：20/20 → 1′、20/40 → 2′。小數視力就是 MAR 的倒數。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">LogMAR</span><h3>對數最小分辨角</h3><p><b>LogMAR ＝ log(MAR)</b>：1.0 → 0、0.5 → 0.3、0.1 → 1.0。數據較線性，研究常用。<b>負值代表優於 1.0</b>（2.0 → −0.3）。視力差一倍，LogMAR 差 0.301。ETDRS 一行 0.1、一個字母 0.02。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">M-unit</span><h3>小 m 除大 M</h3><p>1 M 的字在 1 公尺處占 5 弧分。<b>VA ＝ 測試距離（m）÷ 讀到的 M 數</b>。例：40 公分讀到 2.0M → 0.4 ÷ 2.0 ＝ 0.2 ＝ 20/100；3 公尺讀到 15M → 0.2。</p></div>
+      <div class="concept"><span class="en-term">Grating acuity</span><h3>條紋視力</h3><p>黑白條紋，測能分辨的最細條紋，以<b>每度條紋數 cpd</b> 表示，數值越高解析力越好。不需認字，適合嬰兒、視障者，甚至動物。</p></div>
+      <div class="concept"><span class="lvtag lv-o">○ 知道即可</span><span class="en-term">N-scale</span><h3>N 制近用視標</h3><p>以印刷字級（point）表示，<b>數字越小、字越小</b>，主要評估閱讀能力（老花、閱讀困難）。常見對照：N8 約等於 1.0M（一般報紙內文大小）。</p></div>
+    </div>
+    <div class="erratum" style="margin-top:14px"><b>講義更正：</b>投影片「視標高度怎麼算」寫成 h ＝ 2 × 6 × tan(0.0833°) ＝ 8.73 mm，算式和結果對不上（2 × 6 × tan 0.0833° 會得到 17.45 mm）。正確寫法是 <b>h ＝ d × tan θ ＝ 6 × tan(0.0833°)</b>，或等價的 <b>h ＝ 2d × tan(θ/2)</b>，兩者都得 8.73 mm。本平台一律用 h ＝ d × tan θ。</div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 3-1</span><h3>四種寫法同一個視力</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="cv-svg"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="cv-l">拖曳改變視力 <output id="cv-l-out"></output></label><input type="range" id="cv-l" min="-0.3" max="1.3" step="0.1" value="0.3"></div>
+          <div class="readout">
+            <div class="row"><span>小數 Decimal</span><b id="cv-d">—</b></div>
+            <div class="row"><span>英尺制 Snellen</span><b id="cv-f">—</b></div>
+            <div class="row"><span>公尺制 Metric</span><b id="cv-m">—</b></div>
+            <div class="row"><span>MAR</span><b id="cv-a">—</b></div>
+            <div class="row"><span>LogMAR</span><b id="cv-g">—</b></div>
+          </div>
+          <div class="row-btns"><button class="btn ghost" id="cv-q" type="button">隨機考我</button><button class="btn ghost" id="cv-s" type="button">顯示答案</button></div>
+          <div class="verdict" id="cv-v"></div>
+        </div>
+      </div>
+      <div class="observe">
+        <div class="predict" data-answer="2">
+          <p class="q">小數視力 0.5 的 MAR 是？</p>
+          <div class="opts"><button>0.5 弧分</button><button>5 弧分</button><button>2 弧分</button></div>
+          <p class="why">MAR 是倒數：1 ÷ 0.5 ＝ 2。直接用小數視力是最常見的失分點。</p>
+        </div>
+        <h4>觀察重點</h4><ul>
+          <li>LogMAR 每格等距，小數視力的格子卻越往上越擠——這就是研究偏好 LogMAR 的原因。</li>
+          <li>20/40 和 6/12 是同一個值；不要寫成 6/40。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 3-2</span><h3>視標高度與 5 弧分</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="ht-svg"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="ht-d">測試距離 <output id="ht-d-out"></output></label><input type="range" id="ht-d" min="0" max="6" step="1" value="6"></div>
+          <div class="ctrl"><label>這一行的小數視力</label><div class="seg" id="ht-v"><button data-v="1" aria-pressed="true">1.0</button><button data-v="0.5">0.5</button><button data-v="0.2">0.2</button><button data-v="0.1">0.1</button></div></div>
+          <div class="readout">
+            <div class="row"><span>整字所占視角</span><b id="ht-a">—</b></div>
+            <div class="row"><span>θ（度）</span><b id="ht-t">—</b></div>
+            <div class="row"><span>視標高度 h</span><b id="ht-h">—</b></div>
+            <div class="row"><span>每一筆劃寬</span><b id="ht-s">—</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="observe">
+        <div class="predict" data-answer="0">
+          <p class="q">6 公尺的 1.0 視標高 8.73 mm。視力表改在 2 公尺使用，1.0 的字應該多高？</p>
+          <div class="opts"><button>2.91 mm</button><button>8.73 mm</button><button>26.2 mm</button></div>
+          <p class="why">高度與距離成正比：8.73 × 2/6 ＝ 2.91 mm（106 年專技高考題）。</p>
+        </div>
+        <h4>觀察重點</h4><ul>
+          <li>把距離調到 1 m、視力 1.0：1.45 mm——這就是 1 M 的字高。</li>
+          <li>E 字由 5 條筆劃（含空隙）組成，每一條占 1 弧分。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 3-3</span><h3>M-unit：小 m 除大 M</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="mu-svg"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="mu-m">閱讀距離 <output id="mu-m-out"></output></label><input type="range" id="mu-m" min="20" max="300" step="5" value="40"></div>
+          <div class="ctrl"><label>剛好讀得到的最小字</label><div class="chips" id="mu-M"></div></div>
+          <div class="readout">
+            <div class="row"><span>算式</span><b id="mu-e">—</b></div>
+            <div class="row"><span>小數視力</span><b id="mu-v">—</b></div>
+            <div class="row"><span>Snellen</span><b id="mu-s">—</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="observe">
+        <h4>觀察重點</h4><ul>
+          <li>低視力病人在 50 公分讀 32M → 0.5 ÷ 32 ＝ 0.0156 ＝ 20/1280（106 年國考題）。調調看。</li>
+          <li>同樣 1.0M 的字，拿近到 20 公分才讀得到 → 視力只剩 0.2。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 3-4</span><h3>ETDRS 逐字計分</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="et-svg"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="et-a">這隻眼睛的 LogMAR 是？</label><input class="num" type="number" id="et-a" step="0.02" placeholder="例如 0.24"></div>
+          <div class="row-btns"><button class="btn" id="et-c" type="button">檢查</button><button class="btn ghost" id="et-n" type="button">換一位</button></div>
+          <div class="verdict" id="et-v"></div>
+          <div class="score-line" id="et-s"></div>
+        </div>
+      </div>
+      <div class="observe">
+        <h4>計分方式</h4><ul>
+          <li>每行 5 個字、行與行差 0.1 LogMAR → <b>每個字 0.02</b>。</li>
+          <li>LogMAR ＝ 最後一行（有讀對字的那行）的值 ＋ 0.02 × 讀錯的字數。上面幾行全部讀對時，就只看最後兩三行。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>換算時最常犯的六個錯誤 <span class="tag">MISTAKES</span></h2>
+    <div class="myths">
+      <details class="myth"><summary>0.5 的 MAR 就是 0.5。</summary><div class="fix">MAR 是倒數：0.5 的 MAR 是 2。</div></details>
+      <details class="myth"><summary>LogMAR 就是 MAR。</summary><div class="fix">要取 log：MAR 2 → LogMAR 0.3。</div></details>
+      <details class="myth"><summary>M-unit 是 M ÷ m。</summary><div class="fix">小 m 除大 M：距離（m）÷ M 數。</div></details>
+      <details class="myth"><summary>換測試距離時要換一張字比較大的表。</summary><div class="fix">視標是固定的，改變的是視角；用 VA ＝ 實際距離 ÷ 設計距離重算。</div></details>
+      <details class="myth"><summary>20/40 可以寫成 6/40。</summary><div class="fix">英尺制與公尺制不能混用：20/40 ＝ 6/12。</div></details>
+      <details class="myth"><summary>LogMAR 出現負值是算錯了。</summary><div class="fix">負值代表視力優於 1.0，是正常的。</div></details>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>練習題 <span class="tag">PRACTICE</span></h2>
+    <p class="sub">數字每次隨機。先自己算，卡住再一步一步看詳解；標 ★ 的題目沒看詳解連續全對 3 組，就算精熟。</p>
+    <div id="practice"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w03.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w03", ["同一位同學的視力，用小數、Snellen 分數、LogMAR 三種方式各記一次", "近用卡在 40 cm 測 M 值，換算成小數視力", "帶回正課用 LAB 3-1 驗算換得對不對"]); OBPractice.mount("practice", "w03"); });</script>
+<script>
+(function () {
+  const { range, seg } = OL;
+  OL.levels("levels", [
+    ["★", "MAR ＝ 1 ÷ 小數；LogMAR ＝ log(MAR)", "差一倍 → 差 0.301"],
+    ["★", "h ＝ d × tan θ", "6 m → 8.73 mm；1 M → 1.45 mm"],
+    ["★", "VA ＝ m ÷ M", "小 m 除大 M"],
+    ["◆", "ETDRS：一行 0.1、一字 0.02", ""],
+    ["○", "條紋視力 cpd、N-scale", "嬰兒與閱讀評估"],
+  ]);
+  const n2 = (v, d = 2) => (v < 0 ? "−" : "") + Math.abs(v).toFixed(d);
+
+  /* ---------- LAB 3-1 ---------- */
+  let hide = false;
+  const cl = range("cv-l", (v) => "LogMAR " + n2(v, 1), () => { hide = false; draw1(); });
+  function draw1() {
+    const lm = Math.round(cl.value * 10) / 10, mar = Math.pow(10, lm), dec = 1 / mar;
+    const W = 520, H = 200, x0 = 40, x1 = 480, X = (l) => x0 + (l + 0.3) / 1.6 * (x1 - x0);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="LogMAR 與小數視力刻度"><line x1="${x0}" y1="80" x2="${x1}" y2="80" stroke="var(--line)" stroke-width="2"/><line x1="${x0}" y1="140" x2="${x1}" y2="140" stroke="var(--line)" stroke-width="2"/>`;
+    for (let l = -0.3; l <= 1.31; l += 0.1) { const x = X(l); s += `<line x1="${x}" y1="74" x2="${x}" y2="86" stroke="var(--muted)"/><text x="${x}" y="66" font-size="10" text-anchor="middle" fill="var(--muted)" font-family="var(--font-mono)">${n2(l, 1)}</text>`; }
+    [2, 1.5, 1.2, 1, 0.8, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05].forEach((d) => { const x = X(Math.log10(1 / d)); s += `<line x1="${x}" y1="134" x2="${x}" y2="146" stroke="var(--muted)"/><text x="${x}" y="162" font-size="10" text-anchor="middle" fill="var(--muted)" font-family="var(--font-mono)">${d}</text>`; });
+    s += `<text x="${x0}" y="40" font-size="12" fill="var(--accent)">LogMAR（等距）</text><text x="${x0}" y="184" font-size="12" fill="var(--accent)">小數視力（越往左越擠）</text>`;
+    const x = X(lm); s += `<line x1="${x}" y1="70" x2="${x}" y2="150" stroke="var(--ray)" stroke-width="3"/><circle cx="${x}" cy="80" r="6" fill="var(--ray)"/><circle cx="${x}" cy="140" r="6" fill="var(--ray)"/></svg>`;
+    document.getElementById("cv-svg").innerHTML = s;
+    const put = (id, t) => document.getElementById(id).textContent = hide ? "？" : t;
+    document.getElementById("cv-d").textContent = dec >= 0.995 ? dec.toFixed(1) : dec.toFixed(2);
+    put("cv-f", "20/" + (20 * mar).toFixed(0)); put("cv-m", "6/" + (6 * mar).toFixed(1).replace(/\.0$/, ""));
+    put("cv-a", mar.toFixed(2) + "′"); put("cv-g", n2(lm, 1));
+  }
+  document.getElementById("cv-q").onclick = () => { cl.value = (Math.round(Math.random() * 16) - 3) / 10; hide = true; draw1(); document.getElementById("cv-v").innerHTML = '<span class="pill info">先自己算</span> 只給你小數視力，寫出 Snellen、MAR、LogMAR。'; };
+  document.getElementById("cv-s").onclick = () => { hide = false; draw1(); document.getElementById("cv-v").textContent = ""; };
+  draw1();
+
+  /* ---------- LAB 3-2 ---------- */
+  const DS = [0.4, 1, 2, 3, 4, 5, 6];
+  const hd = range("ht-d", (i) => DS[i] < 1 ? DS[i] * 100 + " cm" : DS[i] + " m", draw2), hv = seg("ht-v", draw2);
+  function draw2() {
+    const d = DS[hd.value], va = +hv.value, arc = 5 / va, th = arc / 60, h = d * Math.tan(th * Math.PI / 180) * 1000;
+    document.getElementById("ht-a").textContent = arc + " 弧分"; document.getElementById("ht-t").textContent = th.toFixed(4) + "°";
+    document.getElementById("ht-h").textContent = h.toFixed(2) + " mm"; document.getElementById("ht-s").textContent = (h / 5).toFixed(2) + " mm（1 弧分 × " + (1 / va) + "）";
+    const W = 520, H = 230, px = Math.min(190, h * 3.2), u = px / 5, ex = 200, ey = 115 - px / 2;
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="E 字與筆劃"><g fill="var(--ink)"><rect x="${ex}" y="${ey}" width="${u}" height="${px}"/><rect x="${ex}" y="${ey}" width="${px}" height="${u}"/><rect x="${ex}" y="${ey + 2 * u}" width="${px}" height="${u}"/><rect x="${ex}" y="${ey + 4 * u}" width="${px}" height="${u}"/></g>`;
+    for (let i = 0; i <= 5; i++) s += `<line x1="${ex - 30}" y1="${ey + i * u}" x2="${ex - 6}" y2="${ey + i * u}" stroke="var(--muted)"/>`;
+    s += `<text x="${ex - 36}" y="${115}" text-anchor="end" font-size="12" fill="var(--accent)" font-family="var(--font-mono)">h ＝ ${h.toFixed(2)} mm</text>`;
+    s += `<text x="${ex + px + 16}" y="${ey + u * 0.7}" font-size="11" fill="var(--muted)">每一格 ＝ ${(1 / va)} 弧分</text>`;
+    s += `<text x="20" y="${H - 10}" font-size="11" fill="var(--muted)">圖中大小依比例縮放（${(px / h).toFixed(1)} 倍）</text></svg>`;
+    document.getElementById("ht-svg").innerHTML = s;
+  }
+  draw2();
+
+  /* ---------- LAB 3-3 ---------- */
+  const MS = [0.4, 0.5, 0.8, 1.0, 1.6, 2.0, 2.5, 4.0, 8.0, 16, 32];
+  let M = 1.0;
+  const mm = range("mu-m", (v) => v + " cm", draw3);
+  const box = document.getElementById("mu-M");
+  box.innerHTML = MS.map((x) => `<button type="button" class="chip" data-m="${x}" aria-pressed="${x === M}">${x.toFixed(1)}M</button>`).join("");
+  box.querySelectorAll("button").forEach((b) => b.onclick = () => { M = +b.dataset.m; box.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b)); draw3(); });
+  function draw3() {
+    const m = mm.value / 100, va = m / M;
+    document.getElementById("mu-e").textContent = `${m.toFixed(2)} ÷ ${M}`;
+    document.getElementById("mu-v").textContent = va.toFixed(va < 0.1 ? 3 : 2);
+    document.getElementById("mu-s").textContent = "20/" + Math.round(20 / va);
+    const W = 520, H = 200, card = 110 + (mm.value - 20) / 280 * 330, fs = Math.max(4, Math.min(70, M * 9));
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="近用卡距離"><circle cx="40" cy="100" r="16" fill="var(--glass)" stroke="var(--glass-edge)"/><circle cx="49" cy="100" r="4" fill="var(--ink)"/>`;
+    s += `<line x1="58" y1="100" x2="${card - 8}" y2="100" stroke="var(--muted)" stroke-dasharray="4 4"/><text x="${(58 + card) / 2}" y="92" font-size="12" text-anchor="middle" fill="var(--muted)" font-family="var(--font-mono)">${mm.value} cm</text>`;
+    s += `<rect x="${card - 6}" y="30" width="70" height="140" rx="6" fill="#fff" stroke="var(--line)"/><text x="${card + 29}" y="${100 + fs * 0.35}" font-size="${fs}" text-anchor="middle" fill="#111" font-weight="700">字</text><text x="${card + 29}" y="186" font-size="11" text-anchor="middle" fill="var(--muted)">${M}M</text></svg>`;
+    document.getElementById("mu-svg").innerHTML = s;
+  }
+  draw3();
+
+  /* ---------- LAB 3-4 ---------- */
+  const L = "CDHKNORSVZ"; let rows, ans, okN = 0, nN = 0;
+  function newE() {
+    const base = [0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0, -0.1][Math.floor(Math.random() * 6)];
+    const tops = [base + 0.3, base + 0.2, base + 0.1, base, base - 0.1];
+    let miss = 0, last = null;
+    rows = tops.map((lm, i) => {
+      const nOk = i < 2 ? 5 : i === 2 ? 3 + Math.floor(Math.random() * 3) : i === 3 ? Math.floor(Math.random() * 4) : Math.floor(Math.random() * 2);
+      const c = OL.shuffle(Array.from({ length: 5 }, (_, k) => k < nOk));
+      return { lm: Math.round(lm * 10) / 10, c, l: Array.from({ length: 5 }, () => L[Math.floor(Math.random() * L.length)]) };
+    });
+    rows.forEach((r) => { if (r.c.some(Boolean)) last = r; });
+    rows.forEach((r) => { if (r.lm >= last.lm) miss += r.c.filter((x) => !x).length; });
+    ans = last.lm + 0.02 * miss;
+    const W = 420; let s = `<svg viewBox="0 0 ${W} ${rows.length * 34 + 14}" role="img" aria-label="ETDRS 報讀">`;
+    rows.forEach((r, i) => {
+      const y = 30 + i * 34, sz = 26 - i * 3;
+      s += `<text x="10" y="${y}" font-size="11" fill="var(--muted)" font-family="var(--font-mono)">${r.lm < 0 ? "−" : ""}${Math.abs(r.lm).toFixed(1)}</text>`;
+      r.l.forEach((ch, j) => { s += `<text x="${90 + j * 56}" y="${y}" font-size="${sz}" font-weight="700" text-anchor="middle" fill="${r.c[j] ? "var(--ok)" : "var(--bad)"}" font-family="var(--font-mono)">${ch}</text>`; });
+      s += `<text x="${W - 8}" y="${y}" font-size="11" text-anchor="end" fill="var(--muted)">${r.c.filter(Boolean).length}/5</text>`;
+    });
+    document.getElementById("et-svg").innerHTML = s + "</svg>";
+    document.getElementById("et-a").value = ""; document.getElementById("et-v").textContent = "";
+    newE.info = { last, miss };
+  }
+  document.getElementById("et-c").onclick = () => {
+    const v = parseFloat(String(document.getElementById("et-a").value).replace("−", "-")); nN++;
+    const good = Math.abs(v - ans) < 0.011; if (good) okN++;
+    const { last, miss } = newE.info;
+    document.getElementById("et-v").innerHTML = (good ? '<span class="pill ok">正確</span> ' : '<span class="pill bad">再算算</span> ') + `最後有讀對的行是 ${n2(last.lm, 1)}；到那一行為止共錯 ${miss} 個字 → ${n2(last.lm, 1)} ＋ 0.02 × ${miss} ＝ ${n2(ans, 2)}。`;
+    document.getElementById("et-s").textContent = `答對 ${okN} / ${nN}`;
+  };
+  document.getElementById("et-n").onclick = newE; newE();
+})();
+</script>
+</body>
+</html>

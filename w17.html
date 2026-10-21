@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W17 期末考前複習｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body data-chapter="w17">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 17 · Review</div>
+    <h1>期末考前複習</h1>
+    <div class="en">Final Review (W10–W16)</div>
+    <p class="lede">後半學期收成三樣東西：<b>七步驟流程</b>與每一步的終點判準、<b>四項技術</b>的關鍵數值、<b>處方三原則與轉介警訊</b>。期末考第 18 週，以第 10–16 週為主、含前半學期基礎觀念，占學期總成績 30%。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>完整背出七步驟遠距離驗光流程，以及每一步的終點判準。</li>
+      <li>鐘面圖、JCC、裂孔板、雙眼平衡四項技術的操作與判讀一次核對。</li>
+      <li>認出處方三原則與轉介警訊，考題與臨床都用得上。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>後半學期地圖 <span class="tag">MAP</span></h2>
+    <div class="wkplan" id="map"></div>
+  </section>
+
+  <section class="block">
+    <h2>七步驟與終點判準 <span class="tag">FLOW</span></h2>
+    <div class="terms-wrap"><table class="terms"><tr><th>順序</th><th>步驟</th><th>終點判準</th></tr>
+      <tr><td>①</td><td>初始 MPMVA</td><td>加 −0.25 不再提升一行；霧視後 20/40～20/60 起</td></tr>
+      <tr><td>②</td><td>初始紅綠檢查</td><td>兩邊一樣清晰；紅清加負、綠清加正</td></tr>
+      <tr><td>③</td><td>傑克森交叉圓柱鏡</td><td>軸度：兩面等清晰；度數：兩面等模糊</td></tr>
+      <tr><td>④</td><td>第二次 MPMVA</td><td>紅綠終點／變小變黑終點／20/20 終點</td></tr>
+      <tr><td>⑤</td><td>雙眼平衡</td><td>兩行一樣模糊；無法平衡時主利眼稍清</td></tr>
+      <tr><td>⑥</td><td>雙眼 MPMVA</td><td>不超過最佳視力多 −0.25 D</td></tr>
+      <tr><td>⑦</td><td>主利眼確認與試戴</td><td>通過正確性、舒適性、功能性三道檢核</td></tr></table></div>
+  </section>
+
+  <section class="block">
+    <h2>三個關鍵數 <span class="tag">NUMBERS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">×30</span><h3>鐘面圖軸度法則</h3><p>最清晰線的鐘點數 × 30 ＝ 負柱鏡軸度。霧視 +0.75～+1.00。</p></div>
+      <div class="concept"><span class="en-term">−0.50 : +0.25</span><h3>JCC 球面補償</h3><p>柱鏡每增 −0.50 D，球面補 +0.25 D。軸度步進 15°／10°／5°／2–3°。</p></div>
+      <div class="concept"><span class="en-term">3Δ BU / BD</span><h3>稜鏡分離量</h3><p>OD 基底朝上、OS 基底朝下；拉不開可加量。霧視 +0.75，視力降至 20/25 或更差。</p></div>
+      <div class="concept"><span class="en-term">+1.50</span><h3>裂孔板霧視</h3><p>縫寬 &lt; 1 mm、長約 15 mm；負柱鏡軸 ＝ 第一主子午線。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 17-1</span><h3>七步驟與終點判準</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim"><div id="o171"></div><div style="margin-top:8px"><b>這是哪一步的終點？</b></div><div id="d171"></div></div>
+    </div>
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 17-2</span><h3>四項技術速查</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim" id="d172"></div>
+    </div>
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 17-3</span><h3>後半學期六個陷阱</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim" id="d173"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>完整驗光紀錄的標準格式 <span class="tag">RECORD</span></h2>
+    <div class="rec">CC / VN / POH / PMH ...................... 問診
+VAsc / VAcc  OD OS OU  @D @N ............ 視力
+Dry Ret 或 AR 或 Clock Dial .............. 起點
+1st MPMVA → Bichrome → JCC → 2nd MPMVA ... 單眼四步
+Bal (方式) → BVA → Dominant eye .......... 雙眼三步
+Rx: OD ___ ___ ×___  OS ___ ___ ×___  Add ___  PD ___
+※ 期末考與期末技術考皆會檢核紀錄格式的完整性</div>
+  </section>
+
+  <section class="block">
+    <h2>想再多練一點 <span class="tag">MORE</span></h2>
+    <div class="hubs">
+      <a class="hub" href="exam.html"><small>CHALLENGE</small><b>綜合挑戰：後半學期</b><span>W10–W16 為主、含前半基礎，隨機抽題。</span></a>
+      <a class="hub" href="calc.html"><small>STAR CALCULATIONS</small><b>★ 必會計算練功房</b><span>★11–★13 是後半學期的計算。</span></a>
+      <a class="hub" href="progress.html"><small>COURSE MAP</small><b>課程進度地圖</b><span>看看還有哪一站沒亮。</span></a>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w17.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w17", ["W17–W18 期末技術考：完整驗光流程與處方單", "期末考與技術考皆會檢核紀錄格式的完整性", "先用本頁 LAB 17-1 把七步驟與終點判準背熟"]); });</script>
+<script>
+(function () {
+  const { WEEKS, wkLabel, order, drill } = OL;
+  OL.levels("levels", [
+    ["◆", "七步驟與終點判準", ""],
+    ["◆", "四項技術的關鍵數值", "×30、−0.50:+0.25、3Δ、+1.50"],
+    ["◆", "處方三原則與轉介警訊", ""],
+  ]);
+  document.getElementById("map").innerHTML = WEEKS.filter((w) => w.wk >= 10 && w.wk <= 16).map((w) => `<div class="wk"><b>${wkLabel(w)}</b><span>${w.zh}</span><a href="${w.id}.html">回去複習 →</a></div>`).join("");
+  order("o171", ["初始 MPMVA", "初始紅綠", "JCC", "第二次 MPMVA", "雙眼平衡", "雙眼 MPMVA", "主利眼與試戴"], { first: "最先", last: "最後" });
+  drill("d171", ["初始 MPMVA", "初始紅綠", "JCC 軸度", "JCC 度數", "雙眼平衡", "雙眼 MPMVA"], [
+    { q: "加 −0.25 後視力不再提升一行。", a: 0, why: "初始 MPMVA。" },
+    { q: "紅綠兩邊一樣清晰。", a: 1, why: "初始紅綠。" },
+    { q: "翻轉後兩面等清晰（手柄對軸）。", a: 2, why: "JCC 軸度。" },
+    { q: "翻轉後兩面等模糊（手柄轉 45°）。", a: 3, why: "JCC 度數。" },
+    { q: "上下兩行一樣模糊，或主利眼稍清。", a: 4, why: "雙眼平衡。" },
+    { q: "不超過最佳視力多 −0.25 D。", a: 5, why: "雙眼 MPMVA。" },
+  ], { unit: "終點" });
+  drill("d172", ["鐘面圖", "JCC", "裂孔板", "稜鏡分離法"], [
+    { q: "霧視 +0.75～+1.00，找最清晰的線。", a: 0, why: "×30 得軸。" },
+    { q: "手柄對齊柱鏡軸，翻轉，追紅點。", a: 1, why: "JCC 軸度。" },
+    { q: "+1.50 霧視，旋轉找兩條主子午線，畫光學十字。", a: 2, why: "裂孔板。" },
+    { q: "霧視 +0.75 → OD 3ΔBU／OS 3ΔBD → 清晰眼 +0.25。", a: 3, why: "稜鏡分離法。" },
+    { q: "每 −0.50 柱鏡補 +0.25 球面。", a: 1, why: "JCC 度數（鐘面圖加柱鏡時也一樣）。" },
+    { q: "能分離不互相垂直的主子午線。", a: 2, why: "裂孔板。" },
+    { q: "不需要任何儀器就能推得軸與量。", a: 0, why: "鐘面圖。" },
+  ], { unit: "關鍵操作" });
+  drill("d173", ["對", "錯（陷阱）"], [
+    { q: "鐘面圖 3–9 線最清楚，軸度寫 3。", a: 1, why: "要乘 30：090。" },
+    { q: "JCC 測度數時，手柄維持對齊柱鏡軸。", a: 1, why: "要轉 45°。" },
+    { q: "柱鏡增加 −0.50，球面補 +0.25。", a: 0, why: "不是反過來。" },
+    { q: "裂孔板的第二主子午線是負柱鏡軸。", a: 1, why: "第一主子午線才是負柱鏡軸。" },
+    { q: "稜鏡分離法在比較模糊那眼加正度數。", a: 1, why: "方向反了：在較清楚那眼加正。" },
+    { q: "流程順序：雙眼平衡在 JCC 之前。", a: 1, why: "單眼未完成即進雙眼——錯。" },
+    { q: "無法平衡時，讓主利眼稍微清晰。", a: 0, why: "正確。" },
+  ], { unit: "敘述" });
+})();
+</script>
+</body>
+</html>

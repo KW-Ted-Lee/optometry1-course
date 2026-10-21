@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W12 傑克森交叉圓柱鏡檢查｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>.jcc-faces { display:grid; grid-template-columns: 1fr 1fr; gap:8px; } .jcc-faces button { font: inherit; padding: 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; color: var(--ink); } .jcc-faces button[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }</style>
+</head>
+<body data-chapter="w12">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 12</div>
+    <h1>傑克森交叉圓柱鏡檢查</h1>
+    <div class="en">Jackson Cross Cylinder: Axis First, Then Power</div>
+    <p class="lede">JCC 是一片<b>等量正柱鏡與負柱鏡互相垂直</b>組成的鏡片，等價球面為零——翻轉時不會移動 COLC，所以可以只微調散光。口訣兩句：<b>軸度追紅點；度數紅清加負柱</b>。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>認出手柄、紅點與白點的位置，並說明它們各代表什麼。</li>
+      <li>完成「追紅點」的軸度調整，並判斷何時到達終點。</li>
+      <li>完成柱鏡度數調整並正確執行等價球面補償。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Structure</span><h3>JCC 的結構</h3><p>常見 <b>±0.25 D</b>（總差 0.50）與 ±0.50 D。<b>紅點：負柱鏡軸</b>；白點（或黑點）：正柱鏡軸。手柄（翻轉軸）在紅白點之間，與兩者各夾 <b>45°</b>。翻轉手柄，紅白點位置互換。</p></div>
+      <div class="concept"><span class="en-term">SE ＝ 0</span><h3>為什麼翻轉不會變模糊</h3><p>+0.25 球面 −0.50 柱面 → SE ＝ 0。翻轉時整體球面不變，COLC 位置不動，病人只感受到散光的差異。低視力或不確定的受檢者可用 ±0.50（差異大、較易分辨，但精度較低）。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Prerequisite</span><h3>前置條件</h3><p>做 JCC 之前<b>必須先完成單眼 MPMVA</b>，讓 COLC 落在網膜上，否則翻轉的比較不成立。視標：最佳視力大一行，點狀或圓形視標最佳。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Axis first</span><h3>為什麼先軸度、後度數</h3><p>軸度錯了，加多少度數都合不起兩條焦線；軸偏 15°，柱鏡的有效度數約剩一半（Carlson &amp; Kurtz）。例外：散光低於 −0.50 時軸度不敏感，可先確認度數（第 13 週）。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Axis refinement</span><h3>軸度：追紅點</h3><p>手柄<b>對齊</b>目前柱鏡軸 → 快速翻轉 → 問「第一面還是第二面清楚？」→ 柱鏡軸<b>朝較清楚那一面的紅點方向</b>轉 → 重複到兩面等清晰。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Power refinement</span><h3>度數：紅清加負</h3><p>手柄<b>轉 45°</b>，讓紅點或白點與柱鏡軸重合。<b>紅點對軸較清楚 → 加 −0.25；白點對軸較清楚 → 減 −0.25</b>。終點：兩面一樣清楚（或一樣模糊）。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">−0.50 : +0.25</span><h3>球面補償</h3><p>柱鏡每增 −0.50，球面補 +0.25，SE 才不變。實務作法：<b>柱鏡每動兩格，球面動一格；單數格先記帳</b>，湊滿兩格再補。減少散光時反向：柱鏡 +0.50 → 球面 −0.25。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 12-1</span><h3>拆解 JCC：手柄、紅點、白點</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="jc-svg"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="jc-h">手柄方向 <output id="jc-h-out"></output></label><input type="range" id="jc-h" min="0" max="175" step="5" value="45"></div>
+          <div class="ctrl"><div class="seg" id="jc-f"><button data-v="1" aria-pressed="true">第一面</button><button data-v="2">翻轉：第二面</button></div></div>
+          <div class="readout"><div class="row"><span>紅點（負柱軸）</span><b id="jc-r">—</b></div><div class="row"><span>白點（正柱軸）</span><b id="jc-w">—</b></div><div class="row"><span>等效鏡片</span><b id="jc-e">—</b></div></div>
+        </div>
+      </div>
+      <div class="observe">
+        <div class="predict" data-answer="2">
+          <p class="q">要用 JCC 精修軸度，目前柱鏡軸 180，手柄應該放在？</p>
+          <div class="opts"><button>135（紅點對 180）</button><button>090</button><button>180（手柄對齊軸）</button></div>
+          <p class="why">測軸度：手柄對齊柱鏡軸，紅白點落在軸的兩側 45°。測度數時才把手柄轉 45°，讓紅或白點對到軸上。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 12-2</span><h3>追紅點：軸度精修</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="ax-svg"></div></div>
+        <div class="lab-panel">
+          <div class="readout"><div class="row"><span>綜合驗光儀</span><b id="ax-rx">—</b></div></div>
+          <div class="ctrl"><label>翻轉並比較（第一面紅點在逆時針側）</label><div class="jcc-faces"><button type="button" id="ax-1">看第一面</button><button type="button" id="ax-2">看第二面</button></div></div>
+          <div class="patient" style="background:var(--surface-2)"><small>病人說</small><span id="ax-say">—</span></div>
+          <div class="ctrl"><label>轉動柱鏡軸</label><div class="seg" id="ax-st"><button data-v="15">15°</button><button data-v="10">10°</button><button data-v="5" aria-pressed="true">5°</button><button data-v="2">2°</button></div></div>
+          <div class="btn-grid"><button class="btn" id="ax-ccw" type="button">↺ 軸 +</button><button class="btn" id="ax-cw" type="button">↻ 軸 −</button></div>
+          <div class="row-btns"><button class="btn ok" id="ax-end" type="button">兩面一樣，結束</button><button class="btn ghost" id="ax-new" type="button">換一位</button></div>
+          <div class="verdict" id="ax-v"></div>
+        </div>
+      </div>
+      <div class="observe">
+        <h4>觀察重點</h4><ul>
+          <li>哪一面比較清楚，就把柱鏡軸往<b>那一面的紅點</b>轉。越接近真實軸，兩面差異越小。</li>
+          <li>來回跳的時候，把步進改小。模擬病人以殘餘散光大小作答，差異小於約 0.12 D 時回答「一樣」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 12-3</span><h3>度數精修與球面補償</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="pw-svg"></div></div>
+        <div class="lab-panel">
+          <div class="readout"><div class="row"><span>綜合驗光儀</span><b id="pw-rx">—</b></div><div class="row"><span>記帳（未補的柱鏡）</span><b id="pw-acc">—</b></div></div>
+          <div class="ctrl"><label>手柄轉 45°，翻轉比較</label><div class="jcc-faces"><button type="button" id="pw-1">紅點對軸</button><button type="button" id="pw-2">白點對軸</button></div></div>
+          <div class="patient" style="background:var(--surface-2)"><small>病人說</small><span id="pw-say">—</span></div>
+          <div class="btn-grid"><button class="btn" id="pw-m" type="button">柱鏡 −0.25</button><button class="btn" id="pw-p" type="button">柱鏡 +0.25</button><button class="btn ghost" id="pw-sp" type="button">球面 +0.25</button><button class="btn ghost" id="pw-sm" type="button">球面 −0.25</button></div>
+          <div class="row-btns"><button class="btn ok" id="pw-end" type="button">結束</button><button class="btn ghost" id="pw-new" type="button">換一位</button></div>
+          <div class="verdict" id="pw-v"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 12-4</span><h3>補償記帳練習</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="sim" id="d124"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>紀錄方式 <span class="tag">RECORD</span></h2>
+    <div class="rec"># 正常範例
+1st MPMVA OD −2.25 DS (VA 0.8)
+JCC axis:  180 → 175 → 178（終點：兩面等清晰）
+JCC power: −0.25 → −0.50（終點：兩面等模糊）  sph 補 +0.25
+JCC 後 OD −2.00 −0.50 ×178
+# 異常範例
+JCC OS: 軸度反覆在 060 與 120 之間跳動，無法收斂 → 疑似不規則散光</div>
+  </section>
+
+  <section class="block">
+    <h2>JCC 常見操作錯誤 <span class="tag">MISTAKES</span></h2>
+    <div class="myths">
+      <details class="myth"><summary>沒做 MPMVA 也可以直接 JCC。</summary><div class="fix">COLC 不在網膜上，翻轉比較無意義。</div></details>
+      <details class="myth"><summary>翻轉慢一點，讓病人看清楚。</summary><div class="fix">太慢病人會開始調節適應，兩面都覺得一樣。快而穩，每面約 1–2 秒。</div></details>
+      <details class="myth"><summary>測度數時手柄維持對軸。</summary><div class="fix">要轉 45°；否則測的還是軸度，度數永遠調不對。</div></details>
+      <details class="myth"><summary>病人選哪面，就往白點轉。</summary><div class="fix">追紅點。追白點會越調越偏。</div></details>
+      <details class="myth"><summary>加柱鏡不用補球面。</summary><div class="fix">整體變模糊，病人以為散光加錯。</div></details>
+      <details class="myth"><summary>高度散光也用大步距轉軸比較快。</summary><div class="fix">會跳過終點、來回震盪。散光越大，步進越小。</div></details>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>練習題 <span class="tag">PRACTICE</span></h2>
+    <p class="sub">數字每次隨機。先自己算，卡住再一步一步看詳解；標 ★ 的題目沒看詳解連續全對 3 組，就算精熟。</p>
+    <div id="practice"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w12.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w12", ["綜合驗光儀內建 JCC：先軸度（手柄對軸、追紅點），再度數（手柄轉 45°）", "每次柱鏡變化都記帳，湊滿 −0.50 補 +0.25 球面", "請帶著 LAB 12-4 的補償表進實驗室"]); OBPractice.mount("practice", "w12"); });</script>
+<script>
+(function () {
+  const { range, seg, drill, fmt } = OL;
+  OL.levels("levels", [
+    ["★", "球面補償：柱鏡 −0.50 ↔ 球面 +0.25", "單數格先記帳"],
+    ["◆", "紅點負柱軸、白點正柱軸；手柄夾 45°", "SE ＝ 0"],
+    ["◆", "軸度：手柄對軸、追紅點", "兩面等清晰"],
+    ["◆", "度數：手柄轉 45°，紅清加負", "兩面等模糊"],
+  ]);
+  const ax3 = (a) => String(Math.round(a)).padStart(3, "0");
+  const norm = (a) => { let x = Math.round(a) % 180; if (x <= 0) x += 180; return x; };
+  const rad = (d) => d * Math.PI / 180;
+  /* 負柱鏡 C×A 的功率向量（J0、J45）；殘餘散光大小 ＝ 2√(J0²＋J45²) */
+  const vec = (C, A) => [-(C / 2) * Math.cos(rad(2 * A)), -(C / 2) * Math.sin(rad(2 * A))];
+  const resid = (need, lens, jccRed) => { const n = vec(need[0], need[1]), l = vec(lens[0], lens[1]), j = vec(-0.5, jccRed); return 2 * Math.hypot(n[0] - l[0] - j[0], n[1] - l[1] - j[1]); };
+  /* 畫 JCC：手柄 h、紅點在 red、白點在 red+90；另外畫目前柱鏡軸 cylA */
+  function jccSVG(h, red, cylA, opt = {}) {
+    const cx = 160, cy = 150, R = 105, P = (d, r) => [cx + r * Math.cos(rad(d)), cy - r * Math.sin(rad(d))];
+    let s = `<svg viewBox="0 0 320 300" role="img" aria-label="JCC" style="max-width:380px"><path d="M${cx - R - 20},${cy} A${R + 20} ${R + 20} 0 0 1 ${cx + R + 20},${cy}" fill="none" stroke="var(--line)" stroke-dasharray="3 4"/>`;
+    for (let d = 0; d <= 180; d += 30) { const [x, y] = P(d, R + 34); s += `<text x="${x}" y="${y + 4}" font-size="10" text-anchor="middle" fill="var(--muted)" font-family="var(--font-mono)">${d === 0 ? 0 : d}</text>`; }
+    s += `<circle cx="${cx}" cy="${cy}" r="${R - 30}" fill="var(--glass)" stroke="var(--glass-edge)" stroke-width="2"/>`;
+    if (cylA != null) { const [a1, b1] = P(cylA, R + 10), [a2, b2] = P(cylA + 180, R + 10); s += `<line x1="${a1}" y1="${b1}" x2="${a2}" y2="${b2}" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 4"/><text x="${P(cylA, R + 22)[0]}" y="${P(cylA, R + 22)[1] + 4}" font-size="11" text-anchor="middle" fill="var(--accent)" font-weight="700">柱軸</text>`; }
+    const [h1, k1] = P(h, R - 30), [h2, k2] = P(h + 180, R + 26);
+    s += `<line x1="${h1}" y1="${k1}" x2="${h2}" y2="${k2}" stroke="var(--muted)" stroke-width="7" stroke-linecap="round"/><text x="${P(h + 180, R + 40)[0]}" y="${P(h + 180, R + 40)[1] + 4}" font-size="10" text-anchor="middle" fill="var(--muted)">手柄</text>`;
+    [red, red + 180].forEach((d) => { const [x, y] = P(d, R - 46); s += `<circle cx="${x}" cy="${y}" r="7" fill="#d32f2f"/>`; });
+    [red + 90, red + 270].forEach((d) => { const [x, y] = P(d, R - 46); s += `<circle cx="${x}" cy="${y}" r="7" fill="#fff" stroke="#333"/>`; });
+    if (opt.note) s += `<text x="${cx}" y="292" font-size="11" text-anchor="middle" fill="var(--muted)">${opt.note}</text>`;
+    return s + "</svg>";
+  }
+
+  /* ---------- LAB 12-1 ---------- */
+  const jh = range("jc-h", (v) => ax3(norm(v)), d1), jf = seg("jc-f", d1);
+  function d1() {
+    const h = jh.value, red = jf.value === "1" ? h + 45 : h - 45;
+    document.getElementById("jc-svg").innerHTML = jccSVG(h, red, null, { note: "從檢查者看病人（TABO）" });
+    document.getElementById("jc-r").textContent = ax3(norm(red)) + " / " + ax3(norm(red + 180));
+    document.getElementById("jc-w").textContent = ax3(norm(red + 90));
+    document.getElementById("jc-e").textContent = `+0.25 −0.50 ×${ax3(norm(red))}`;
+  }
+  d1();
+
+  /* ---------- LAB 12-2 ---------- */
+  const st = seg("ax-st");
+  let A2, T2, face = 0;
+  function new2() {
+    const C = -[0.75, 1, 1.5, 2, 2.5][Math.floor(Math.random() * 5)], At = [10, 25, 165, 150, 80, 100, 175, 5][Math.floor(Math.random() * 8)];
+    T2 = { C, A: At, S: -2 }; A2 = norm(At + (Math.random() < 0.5 ? -1 : 1) * (15 + Math.floor(Math.random() * 3) * 5)); face = 0;
+    document.getElementById("ax-v").textContent = ""; document.getElementById("ax-say").textContent = "—"; d2();
+  }
+  function rs(f) { return resid([T2.C, T2.A], [T2.C, A2], f === 1 ? A2 + 45 : A2 - 45); }
+  function d2() {
+    const red = face === 2 ? A2 - 45 : A2 + 45;
+    document.getElementById("ax-svg").innerHTML = jccSVG(A2, red, A2, { note: face ? `目前顯示第${face === 1 ? "一" : "二"}面` : "按右邊的按鈕翻轉比較" });
+    document.getElementById("ax-rx").textContent = `${fmt.s(T2.S)} ${fmt.s(T2.C)} ×${ax3(A2)}`;
+    document.getElementById("ax-1").setAttribute("aria-pressed", face === 1); document.getElementById("ax-2").setAttribute("aria-pressed", face === 2);
+  }
+  function show(f) {
+    face = f; d2();
+    const r1 = rs(1), r2 = rs(2);
+    document.getElementById("ax-say").textContent = Math.abs(r1 - r2) < 0.12 ? "「兩面差不多。」" : `「${r1 < r2 ? "第一面" : "第二面"}比較清楚。」`;
+  }
+  document.getElementById("ax-1").onclick = () => show(1);
+  document.getElementById("ax-2").onclick = () => show(2);
+  document.getElementById("ax-ccw").onclick = () => { A2 = norm(A2 + +st.value); face = 0; d2(); document.getElementById("ax-say").textContent = "（請再翻轉比較）"; };
+  document.getElementById("ax-cw").onclick = () => { A2 = norm(A2 - +st.value); face = 0; d2(); document.getElementById("ax-say").textContent = "（請再翻轉比較）"; };
+  document.getElementById("ax-end").onclick = () => {
+    const d = Math.min(Math.abs(A2 - T2.A), 180 - Math.abs(A2 - T2.A));
+    document.getElementById("ax-v").innerHTML = (d <= 3 ? '<span class="pill ok">到達終點</span> ' : d <= 7 ? '<span class="pill warn">接近</span> ' : '<span class="pill bad">還沒到</span> ') + `真實軸 ${ax3(T2.A)}，你停在 ${ax3(A2)}（差 ${d}°）。散光 ${fmt.s(T2.C)} 時建議步進 ${Math.abs(T2.C) <= 0.5 ? 15 : Math.abs(T2.C) <= 1.5 ? 10 : 5}°。`;
+  };
+  document.getElementById("ax-new").onclick = new2; new2();
+
+  /* ---------- LAB 12-3 ---------- */
+  let T3, S3, C3, acc;
+  function new3() {
+    const A = [180, 90, 175, 10][Math.floor(Math.random() * 4)], C = -[0.5, 0.75, 1, 1.25, 1.5, 1.75][Math.floor(Math.random() * 6)];
+    T3 = { S: -1.5, C, A }; const start = C + (Math.random() < 0.5 ? 0.5 : -0.5) * (Math.random() < 0.5 ? 1 : 2);
+    C3 = Math.min(-0.25, start); S3 = T3.S + T3.C / 2 - C3 / 2; S3 = Math.round(S3 * 4) / 4; acc = 0;
+    document.getElementById("pw-v").textContent = ""; document.getElementById("pw-say").textContent = "—"; d3(0);
+  }
+  function d3(f) {
+    document.getElementById("pw-svg").innerHTML = jccSVG(T3.A + 45, f === 2 ? T3.A + 90 : T3.A, T3.A, { note: f ? (f === 1 ? "紅點對軸：等於多加一點負柱鏡" : "白點對軸：等於少一點負柱鏡") : "手柄已轉 45°" });
+    document.getElementById("pw-rx").textContent = `${fmt.s(S3)} ${fmt.s(C3)} ×${ax3(T3.A)}`;
+    document.getElementById("pw-acc").textContent = acc === 0 ? "0（已平衡）" : `${fmt.s(acc)}（${Math.abs(acc) >= 0.5 ? "該補球面了" : "先記著"}）`;
+    document.getElementById("pw-1").setAttribute("aria-pressed", f === 1); document.getElementById("pw-2").setAttribute("aria-pressed", f === 2);
+  }
+  function say3(f) {
+    d3(f);
+    const r1 = resid([T3.C, T3.A], [C3, T3.A], T3.A), r2 = resid([T3.C, T3.A], [C3, T3.A], T3.A + 90);
+    document.getElementById("pw-say").textContent = Math.abs(r1 - r2) < 0.12 ? "「兩面一樣（一樣模糊）。」" : `「${r1 < r2 ? "紅點那面" : "白點那面"}比較清楚。」`;
+  }
+  document.getElementById("pw-1").onclick = () => say3(1);
+  document.getElementById("pw-2").onclick = () => say3(2);
+  document.getElementById("pw-m").onclick = () => { C3 -= 0.25; acc -= 0.25; d3(0); document.getElementById("pw-say").textContent = "（請再翻轉比較）"; };
+  document.getElementById("pw-p").onclick = () => { if (C3 >= -0.25) return; C3 += 0.25; acc += 0.25; d3(0); document.getElementById("pw-say").textContent = "（請再翻轉比較）"; };
+  document.getElementById("pw-sp").onclick = () => { S3 += 0.25; acc += 0.5; d3(0); };
+  document.getElementById("pw-sm").onclick = () => { S3 -= 0.25; acc -= 0.5; d3(0); };
+  document.getElementById("pw-end").onclick = () => {
+    const okC = Math.abs(C3 - T3.C) < 0.01, se = S3 + C3 / 2, seT = T3.S + T3.C / 2, okS = Math.abs(se - seT) <= 0.125 + 1e-9;
+    document.getElementById("pw-v").innerHTML = `${okC ? '<span class="pill ok">柱鏡正確</span>' : `<span class="pill bad">柱鏡應為 ${fmt.s(T3.C)}</span>`} ${okS ? '<span class="pill ok">SE 維持住了</span>' : `<span class="pill warn">SE 跑掉 ${fmt.s(se - seT, 3)}</span> 記得每 −0.50 柱鏡補 +0.25 球面`}　真實：${fmt.s(T3.S)} ${fmt.s(T3.C)} ×${ax3(T3.A)}`;
+  };
+  document.getElementById("pw-new").onclick = new3; new3();
+
+  /* ---------- LAB 12-4 ---------- */
+  drill("d124", ["球面補 +0.25", "球面補 +0.50", "球面補 −0.25", "先記帳，不動球面", "球面補 +0.75"], [
+    { q: "柱鏡 −0.25 → −0.75（變化 −0.50）", a: 0, why: "−0.50 → +0.25。" },
+    { q: "柱鏡 −0.50 → −1.50（變化 −1.00）", a: 1, why: "−1.00 → +0.50。" },
+    { q: "柱鏡 −1.00 → −0.50（變化 +0.50）", a: 2, why: "減少散光，反向補 −0.25。" },
+    { q: "柱鏡 −0.50 → −0.75（變化 −0.25）", a: 3, why: "單數格（+0.125）先記帳，湊滿兩格再補。" },
+    { q: "柱鏡 −0.25 → −1.75（變化 −1.50）", a: 4, why: "−1.50 → +0.75。" },
+    { q: "柱鏡 −1.25 → −0.75（變化 +0.50）", a: 2, why: "−0.25。驗算 SE：前後必須相同。" },
+  ], { unit: "情境" });
+})();
+</script>
+</body>
+</html>

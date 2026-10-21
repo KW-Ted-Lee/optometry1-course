@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W16 一般驗光的最終處方決定｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>.fieldchips .chip[aria-pressed="true"] { background: var(--warn); border-color: var(--warn); color: #fff; }</style>
+</head>
+<body data-chapter="w16">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 16</div>
+    <h1>一般驗光的最終處方決定</h1>
+    <div class="en">From Test Data to a Prescription People Can Wear</div>
+    <p class="lede">檢查數據不等於處方。一張處方要通過三道檢核：<b>正確性</b>（這個度數對嗎）、<b>舒適性</b>（戴起來舒服嗎）、<b>功能性</b>（他的生活用得上嗎）。減量的共同精神：<b>先讓病人戴得住，再追求數據上的完美</b>。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>從初步評估到病人教育，說出處方七個環節的產出與判斷點。</li>
+      <li>以正確性、舒適性、功能性檢核一張處方是否可以開立。</li>
+      <li>針對老花、電腦族與兒童，說出處方需要額外考慮什麼。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">Steps 1–3</span><h3>評估、客觀、主觀</h3><p>一、<b>初步評估</b>：主訴、用眼需求、VAsc／VAcc、病史。二、<b>客觀驗光</b>：自動驗光、檢影（兒童、老人、配合度低者特別適合）。三、<b>主觀驗光</b>：霧視測球面、JCC 測柱鏡與軸、雙眼平衡。</p></div>
+      <div class="concept"><span class="en-term">Steps 4–7</span><h3>功能、特殊、開立、原則</h3><p>四、<b>功能性檢查</b>：調節幅度與靈活度、遮蓋、眼球運動、融像。五、<b>特殊需求</b>：漸進多焦、電腦族中距離、兒童近視控制。六、<b>開立與教育</b>。七、<b>三大原則</b>。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Three checks</span><h3>三道檢核</h3><p><b>正確性</b>：每一步基於科學數據，避免過矯或欠矯。<b>舒適性</b>：主觀舒適與客觀數據結合，<b>試戴是唯一的驗證方式，不可省略</b>。<b>功能性</b>：司機、會計、學生，同樣度數的建議可能完全不同。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">When to reduce</span><h3>常見的減量情境</h3><p>首次高度散光：保持 SE，先給 <b>2/3～3/4</b>。度數變化 &gt; 1.00 D：分階段或先給一半，2–4 週複查。屈光參差 &gt; 2.00 D：考慮隱形眼鏡或降低差距。老花初期：依 AA 與工作距離算 Add，<b>保留一半調節力</b>。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Don't prescribe</span><h3>不開處方、直接轉介</h3><p>最佳矯正 &lt; 0.8 且找不到光學原因；兩眼差異大且無法以屈光解釋；複視、視野缺損、視物變形；瞳孔不等大或對光異常；<b>六歲以下</b>依《驗光人員法》不得驗光；<b>六至十五歲初次驗光</b>需眼科醫師確診。</p></div>
+      <div class="concept"><span class="en-term">Four things to say</span><h3>開處方時要說清楚的四件事</h3><p>① 這副眼鏡矯正的是什麼（用白話說球、柱、軸）② 什麼時候戴 ③ 可能的適應期（首次散光、度數變化大、換漸進）先講在前面 ④ 日常保養與定期驗光。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 16-1</span><h3>處方要不要調整？</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim" id="d161"></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 16-2</span><h3>三道檢核</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim" id="d162"></div>
+      <div class="observe"><h4>檢核順序</h4><ul><li>先問「這個度數對嗎」，再問「戴起來舒服嗎」，最後問「他的生活用得上嗎」。三關都過才開立。</li></ul></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 16-3</span><h3>處方單找漏</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="sim" style="align-content:start"><div class="patient"><small>個案</small><span id="rx-case"></span></div><div class="rec" id="rx-form"></div></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label>這張處方單哪些欄位有缺漏或寫錯？（可複選）</label><div class="chips fieldchips" id="rx-f"></div></div>
+          <div class="row-btns"><button class="btn" id="rx-c" type="button">檢查</button><button class="btn ghost" id="rx-n" type="button">下一張</button></div>
+          <div class="verdict" id="rx-v"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 16-4</span><h3>開處方還是轉介？</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="sim" id="d164"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>個案範例 <span class="tag">CASE</span></h2>
+    <div class="rec">個案｜28 歲工程師
+CC：下午看螢幕吃力、傍晚頭痛。VN：螢幕距離 60 cm，每日 9 小時
+Dry Ret：OD −3.00−0.75×175  OS −2.75−0.50×180
+MPMVA/JCC/Bal 後：OD −2.75−0.75×175  OS −2.50−0.50×180  OU 1.2
+判斷：遠用處方減 0.25 以降低螢幕距離的調節需求
+建議：遠用全時配戴；螢幕作業每 40 分鐘遠眺；6 個月複查</div>
+  </section>
+
+  <section class="block">
+    <h2>處方單的完整寫法 <span class="tag">RECORD</span></h2>
+    <div class="rec"># 遠用單光處方
+OD  −2.25 −0.50 × 178    VAcc 1.0    PD 32.0
+OS  −2.00 −0.75 × 172    VAcc 1.0    PD 31.5    OU PD 63.5
+# 含近用加入度（老花）
+OD  +1.50 −0.75 × 090    Add +2.00   工作距離 40 cm
+配戴建議：遠用全時配戴；近用閱讀時使用。6 個月複查。
+※ 必填：OD/OS、球柱軸、矯正視力、PD、Add 與工作距離、配戴建議</div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w16.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w16", ["完整驗光一次：問診 → 視力 → 起點 → 單眼四步 → 雙眼三步", "填寫完整處方單：OD/OS、球柱軸、矯正視力、PD、Add 與工作距離、配戴建議", "用 LAB 16-3 的檢核清單自己找漏"]); });</script>
+<script>
+(function () {
+  const { drill, shuffle } = OL;
+  OL.levels("levels", [
+    ["◆", "三道檢核：正確性、舒適性、功能性", "試戴不可省略"],
+    ["◆", "減量情境：高散 2/3～3/4、變化 > 1.00 分階段、參差 > 2.00", ""],
+    ["◆", "不開處方的轉介警訊與年齡規定", "六歲以下不得驗光"],
+    ["○", "開處方時的四件衛教", ""],
+  ]);
+
+  drill("d161", ["照數據開立", "保持 SE，散光先給 2/3～3/4", "分階段給（先給一半），2–4 週複查", "考慮隱形眼鏡或降低兩眼差距", "依 AA 與工作距離計算 Add", "中距離處方或漸進，並衛教用眼節奏"], [
+    { q: "第一次配眼鏡，−1.00 −2.50 ×170，戴試鏡架說地板傾斜、頭暈。", a: 1, why: "首次高度散光，先減量並保持 SE，適應後再補。" },
+    { q: "舊鏡 −2.00，這次驗出 −3.50，戴上覺得很暈。", a: 2, why: "度數變化 > 1.00 D，分階段給。" },
+    { q: "OD −1.00、OS −4.50，戴框架眼鏡兩眼影像大小不同、融像困難。", a: 3, why: "屈光參差 > 2.00 D。" },
+    { q: "46 歲，遠用正常，看手機要拉遠才清楚，AA 約 3 D，閱讀距離 40 cm。", a: 4, why: "老花初期：近用需求 2.50 D，保留一半調節力（1.5 D）→ Add 約 +1.00。" },
+    { q: "設計師，每天兩個螢幕 10 小時，距離 70 cm，傍晚眼酸。", a: 5, why: "中距離需求未被滿足。" },
+    { q: "22 歲，舊鏡 −2.25，這次 −2.50，矯正 1.0，戴起來舒服。", a: 0, why: "變化小、試戴舒服，照數據開立。" },
+  ], { unit: "情境" });
+
+  drill("d162", ["正確性沒過", "舒適性沒過", "功能性沒過", "三關都過"], [
+    { q: "雙眼 MPMVA 時一路加負到病人說「字變小變黑」才停，處方過矯 −0.50。", a: 0, why: "度數本身就不對。" },
+    { q: "度數完全正確，但沒試戴就開立，病人回家說走路會暈。", a: 1, why: "試戴是舒適性唯一的驗證方式。" },
+    { q: "給了很清楚的遠用處方，但病人是每天看譜的鋼琴老師，譜架距離 60 cm 看不清。", a: 2, why: "沒把問診時的視覺需求用上。" },
+    { q: "度數經 MPMVA、JCC、平衡確認，試戴舒服，也依駕駛需求建議全時配戴。", a: 3, why: "三關都過才開立。" },
+    { q: "自動驗光直接當處方，沒有做主觀驗光。", a: 0, why: "不能單靠儀器數據決定處方。" },
+  ], { unit: "個案" });
+
+  /* ---------- LAB 16-3 ---------- */
+  const FIELDS = ["OD/OS 標示", "軸度三位數", "矯正視力", "PD", "Add 與工作距離", "配戴建議與複查"];
+  const FORMS = [
+    { c: "35 歲上班族，遠用單光。", f: "OD  −2.25 −0.50 × 178    VAcc 1.0    PD 32.0\nOS  −2.00 −0.75 × 5      VAcc 1.0    PD 31.5\n配戴建議：遠用全時配戴。6 個月複查。", bad: [1] },
+    { c: "52 歲，遠近都需要，閱讀距離 40 cm。", f: "OD  +1.50 −0.75 × 090    VAcc 1.0    PD 31.0\nOS  +1.75 −0.50 × 085    VAcc 1.0    PD 31.0\n配戴建議：遠用全時配戴。", bad: [4, 5] },
+    { c: "20 歲學生，遠用單光。", f: "−3.25 −0.50 × 180\n−3.00 DS\nPD 62\n配戴建議：全時配戴；6 個月複查。", bad: [0, 2] },
+    { c: "40 歲司機，遠用單光。", f: "OD  −1.25 −1.00 × 175    VAcc 1.0\nOS  −1.00 −0.75 × 010    VAcc 1.0\n配戴建議：駕駛時務必配戴；首次散光，前一兩週可能覺得地面傾斜。1 年複查。", bad: [3] },
+    { c: "28 歲工程師，螢幕 60 cm。", f: "OD  −2.50 −0.75 × 175    VAcc 1.0    PD 32.5\nOS  −2.25 −0.50 × 180    VAcc 1.0    PD 32.0    OU PD 64.5\n配戴建議：遠用全時配戴；螢幕作業每 40 分鐘遠眺；6 個月複查。", bad: [] },
+  ];
+  let fi = -1, order = [];
+  function next() {
+    if (!order.length) order = shuffle(FORMS.map((_, i) => i));
+    fi = order.pop(); const F = FORMS[fi];
+    document.getElementById("rx-case").textContent = F.c; document.getElementById("rx-form").textContent = F.f;
+    const box = document.getElementById("rx-f");
+    box.innerHTML = FIELDS.map((t, i) => `<button type="button" class="chip" data-i="${i}" aria-pressed="false">${t}</button>`).join("") + `<button type="button" class="chip" data-i="none" aria-pressed="false">都正確</button>`;
+    box.querySelectorAll("button").forEach((b) => b.onclick = () => b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"));
+    document.getElementById("rx-v").textContent = "";
+  }
+  document.getElementById("rx-c").onclick = () => {
+    const F = FORMS[fi], sel = [...document.querySelectorAll("#rx-f button[aria-pressed=true]")].map((b) => b.dataset.i);
+    const picked = sel.filter((x) => x !== "none").map(Number).sort().join(","), right = F.bad.slice().sort().join(",");
+    const good = picked === right && (F.bad.length || sel.includes("none"));
+    const why = F.bad.length ? F.bad.map((i) => FIELDS[i]).join("、") : "沒有缺漏";
+    document.getElementById("rx-v").innerHTML = (good ? '<span class="pill ok">正確</span> ' : '<span class="pill bad">再看看</span> ') + `答案：${why}。必填：OD/OS、球柱軸（軸三位數）、矯正視力、PD、Add 與工作距離（有老花時）、配戴建議。`;
+  };
+  document.getElementById("rx-n").onclick = next; next();
+
+  drill("d164", ["可以開處方", "轉介"], [
+    { q: "最佳矯正視力 0.6，針孔也沒進步，找不到光學原因。", a: 1, why: "不開處方，直接轉介。" },
+    { q: "5 歲小朋友，家長想來配眼鏡。", a: 1, why: "依《驗光人員法》，六歲以下不得驗光，一律轉介眼科。" },
+    { q: "10 歲第一次驗光，沒有眼科就診紀錄。", a: 1, why: "六至十五歲初次驗光需眼科醫師確診無病理因素之證明。" },
+    { q: "右眼瞳孔明顯比左眼大，對光反應遲鈍。", a: 1, why: "瞳孔不等大、對光反應異常 → 立即轉介。" },
+    { q: "35 歲，近視加深 0.50 D，矯正 1.0，其他檢查正常。", a: 0, why: "可以開處方。" },
+    { q: "最近看東西會變成兩個，遮一眼就好了。", a: 1, why: "新發生的複視 → 立即轉介。" },
+    { q: "兩眼矯正視力 1.0 與 0.5，屈光度差不多，原因不明。", a: 1, why: "兩眼差異大且無法以屈光解釋。" },
+  ], { unit: "情境" });
+})();
+</script>
+</body>
+</html>

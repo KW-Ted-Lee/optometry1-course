@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>正課 × 實驗課對照表｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .ptable { display: grid; gap: 8px; }
+  .prow { display: grid; grid-template-columns: 60px minmax(0, 1fr) minmax(0, 1.25fr); gap: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); }
+  .prow > div { padding: 12px 14px; min-width: 0; }
+  .prow .wk { font-family: var(--font-mono); color: var(--accent); font-size: 13px; background: var(--surface-2); display: grid; align-content: center; justify-items: center; gap: 2px; }
+  .prow .wk small { font-size: 10px; color: var(--muted); font-family: var(--font-body); }
+  .prow .plec b, .prow .plab b { display: block; font-family: var(--font-display); font-size: 16px; }
+  .prow .plec small, .prow .plab small { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em; color: var(--accent); }
+  .prow .plab { border-left: 1px dashed var(--line); background: linear-gradient(120deg, color-mix(in srgb, var(--ray-2) 7%, var(--surface)), var(--surface) 70%); }
+  .prow .plab small { color: var(--ray-2); }
+  .prow ul { margin: 4px 0 0; padding-left: 1.1em; font-size: 13.5px; color: var(--ink); }
+  .prow .plec ul { color: var(--muted); }
+  .prow .go { font-size: 13px; margin-top: 6px; display: inline-block; }
+  .prow.exam { background: var(--surface-2); }
+  @media (max-width: 720px) { .prow { grid-template-columns: 48px minmax(0, 1fr); } .prow .plab { grid-column: 2; border-left: 0; border-top: 1px dashed var(--line); } }
+  .units { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+  .units div { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-size: 14px; }
+  .units b { font-family: var(--font-mono); font-size: 12px; color: var(--ray-2); display: block; }
+</style>
+</head>
+<body data-chapter="pairing">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Lecture × Lab</div>
+    <h1>正課 × 實驗課對照表</h1>
+    <div class="en">Optometry I and Optometry Lab I, week by week</div>
+    <p class="lede">《視光學（一）》和《視光學實驗（一）》同一學期、同一週進行，進度逐週對應。<b>正課搞懂「為什麼」、實驗課練「怎麼做」</b>；兩邊用同一套紀錄格式，實驗課量到的數據可以直接拿回正課的互動實驗對照。</p>
+  </div>
+
+  <section class="block">
+    <h2>逐週對照 <span class="tag">18 WEEKS</span></h2>
+    <div class="ptable" id="pt"></div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課的十二個實作單元 <span class="tag">LAB UNITS</span></h2>
+    <p class="sub">課程摘要列出的實作單元，以及在正課哪一週有對應的原理與模擬。</p>
+    <div class="units" id="units"></div>
+  </section>
+
+  <section class="block">
+    <h2>兩個平台怎麼搭配 <span class="tag">HOW THEY CONNECT</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">Before lab</span><h3>上實驗課之前</h3><p>先到本平台同一週，操作互動實驗、做觀念檢核。尤其 W07、W11–W15 的模擬病人，就是實驗課要做的流程。</p></div>
+      <div class="concept"><span class="en-term">After lab</span><h3>實驗課之後</h3><p>把實際量到的數據（PD、AA、鐘面圖軸度、JCC 終點）帶回來，和互動實驗的結果、Hofstetter 期望值對照，寫進作業。</p></div>
+      <div class="concept"><span class="en-term">Same record format</span><h3>同一套紀錄格式</h3><p>每週頁面的「紀錄方式」和實驗課紀錄單一致；期中、期末技術考都會檢核紀錄完整性。</p></div>
+    </div>
+  </section>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/pairs.js"></script>
+<script>
+(function () {
+  const { WEEKS, wkLabel, partnerURL, esc } = OL;
+  const PAIRS = window.OL_PAIRS || {};
+  const pname = ((window.OB_CONFIG || {}).partner || {}).name || "實驗課平台";
+  const rows = [];
+  WEEKS.forEach((w) => {
+    if (w.wk === 10) rows.push(`<div class="prow exam"><div class="wk">W09<small>期中</small></div><div class="plec"><small>正課</small><b>期中考（紙筆）</b><ul><li>範圍 W01–W07，占 30%</li></ul></div><div class="plab"><small>實驗課</small><b>期中技術考（續）</b><ul><li>以操作評分，紀錄完整性為評分項目之一</li></ul></div></div>`);
+    const url = partnerURL(w.id);
+    rows.push(`<div class="prow"><div class="wk">${wkLabel(w)}${w.kind === "rev" ? "<small>複習</small>" : ""}</div>
+      <div class="plec"><small>正課</small><b>${esc(w.zh)}</b><ul>${w.labs.map((t) => `<li>${t}</li>`).join("")}</ul><a class="go" href="${w.id}.html">打開本週頁面 →</a></div>
+      <div class="plab"><small>實驗課</small><b>${esc(w.lab)}</b><ul>${(PAIRS[w.id] || []).map((t) => `<li>${t}</li>`).join("")}</ul>${url ? `<a class="go" href="${url}">前往${esc(pname)} →</a>` : `<span class="go" style="color:var(--muted)">${esc(pname)}即將上線</span>`}</div></div>`);
+  });
+  rows.push(`<div class="prow exam"><div class="wk">W18<small>期末</small></div><div class="plec"><small>正課</small><b>期末考（紙筆為主）</b><ul><li>以 W10–W16 為主、含前半基礎，占 30%</li></ul></div><div class="plab"><small>實驗課</small><b>期末技術考（續）</b><ul><li>完整驗光與處方單</li></ul></div></div>`);
+  document.getElementById("pt").innerHTML = rows.join("");
+  const U = [["問診與記錄", "w01"], ["瞳孔距離測量", "w01"], ["裸眼視力量測與記錄", "w02"], ["電腦驗光機操作", "w04"], ["針孔檢查", "w02"], ["雲霧檢查法", "w07"], ["綜合驗光儀設定與操作", "w07"], ["輔助輪名稱與功能", "w07"], ["球面度測量 MPMVA", "w07"], ["遠方單眼自覺式驗光", "w10"], ["紅綠雙色法", "w07"], ["主利眼測試", "w10"]];
+  document.getElementById("units").innerHTML = U.map(([t, id]) => { const w = WEEKS.find((x) => x.id === id); return `<div><b>${wkLabel(w)}</b>${t}　<a href="${id}.html">原理 →</a></div>`; }).join("");
+})();
+</script>
+</body>
+</html>

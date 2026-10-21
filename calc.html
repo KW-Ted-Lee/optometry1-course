@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>★ 必會計算練功房｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .toc { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+  .toc a { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; align-items: center; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; }
+  .toc a:hover { border-color: var(--accent); }
+  .toc b { font-family: var(--font-mono); color: var(--lv-s); font-size: 15px; }
+  .toc span small { display: block; color: var(--muted); font-family: var(--font-mono); font-size: 12px; }
+  .star-sec { scroll-margin-top: 80px; }
+  .formula-line { font-family: var(--font-mono); background: var(--surface-2); border-radius: 8px; padding: 8px 12px; display: inline-block; margin-bottom: 12px; }
+</style>
+</head>
+<body data-chapter="calc">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Star Calculations</div>
+    <h1>★ 必會計算練功房</h1>
+    <div class="en">Thirteen must-know calculations</div>
+    <p class="lede">全學期要自己動筆算的有十三項，<b>都是一到兩步</b>：前十項是期中考範圍，後三項是期末考範圍。每題數字隨機，按「換一組數字」可以無限練習；卡住時按「看下一步詳解」。每一項<b>沒看詳解、換數字連續全對 3 組</b>就算精熟，會記在<a href="progress.html">課程進度地圖</a>上。</p>
+  </div>
+
+  <section class="block">
+    <h2>目錄 <span class="tag">INDEX</span></h2>
+    <div class="toc" id="toc"></div>
+  </section>
+
+  <div id="secs"></div>
+
+  <section class="block star-sec" id="lab-calc">
+    <h2>延伸計算 <span class="tag">EXTRA</span></h2>
+    <p class="sub">W03 LogMAR 差距、W13 軸度步進。不列入精熟統計，但考題常見。</p>
+    <div id="p-lab"></div>
+  </section>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script>
+(function () {
+  const STARS = [
+    [1, "視力 ＝ 測試距離 ÷ 設計距離", "VA ＝ d ÷ D", "w02"],
+    [2, "四種視力寫法互換", "MAR ＝ 1 ÷ 小數；LogMAR ＝ log(MAR)", "w03"],
+    [3, "視標高度", "h ＝ d × tan θ", "w03"],
+    [4, "M-unit", "VA ＝ m ÷ M（小 m 除大 M）", "w03"],
+    [5, "屈光力", "D ＝ n ÷ f", "w04"],
+    [6, "遠點距離", "遠點（m）＝ 1 ÷ |D|", "w04"],
+    [7, "正負散換算", "球面＋柱面、柱面變號、軸＋90", "w05"],
+    [8, "等價球面", "SE ＝ S ＋ C ÷ 2", "w05"],
+    [9, "調節幅度", "AA ＝ Fnp − Ffp", "w06"],
+    [10, "Hofstetter 最小值", "15 − 0.25 × 年齡（臨床判讀用）", "w06"],
+    [11, "三十法則", "負柱鏡軸 ＝ 鐘點數 × 30", "w11"],
+    [12, "JCC 球面補償", "柱鏡 −0.50 ↔ 球面 +0.25", "w12"],
+    [13, "主子午線 → 處方", "球面取第一主子午線、軸 ＝ 第一主子午線", "w14"],
+  ];
+  const { REG, define, mount } = OBPractice;
+  const seen = new Set();
+  Object.keys(REG).forEach((k) => REG[k].forEach((t) => {
+    if (seen.has(t.title)) return; seen.add(t.title);
+    define(t.star ? "star" + t.star : "starlab", [t]);
+  }));
+  const SJ = OL.journal.star();
+  document.getElementById("toc").innerHTML = STARS.map(([n, t, f]) => `<a href="#s${n}"><b>★${n}</b><span>${t}${SJ[n] && SJ[n].t ? ' <span class="pill ok">已精熟</span>' : ""}<small>${f}</small></span></a>`).join("") + `<a href="#lab-calc"><b>＋</b><span>延伸計算<small>LogMAR 差、軸度步進</small></span></a>`;
+  document.getElementById("secs").innerHTML = STARS.map(([n, t, f, w]) => `<section class="block star-sec" id="s${n}"><h2>★${n}　${t} <span class="tag"><a href="${w}.html">回到 ${w.toUpperCase()} →</a></span></h2><div class="formula-line">${f}</div><div id="p${n}"></div></section>`).join("");
+  document.addEventListener("DOMContentLoaded", () => {
+    STARS.forEach(([n]) => mount("p" + n, "star" + n));
+    mount("p-lab", "starlab");
+  });
+})();
+</script>
+</body>
+</html>

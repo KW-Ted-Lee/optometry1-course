@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W11 以鐘面圖進行初始度數測量｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>.clk line { cursor: pointer; } .clk line:hover { stroke: var(--accent); }</style>
+</head>
+<body data-chapter="w11">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 11</div>
+    <h1>以鐘面圖進行初始度數測量</h1>
+    <div class="en">Clock Dial / Sunburst Chart Refraction</div>
+    <p class="lede">鐘面圖讓病人自己指出散光軸：先<b>霧視</b>把兩條焦線推到網膜前，病人看到<b>最黑最清楚</b>的那條線，<b>鐘點數 × 30 ＝ 負柱鏡軸度</b>。它最大的價值是：<b>不需要任何儀器</b>就能推得散光的軸與量。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>畫出 Sturm 間隙，並說明霧視如何移動最小模糊圈的位置。</li>
+      <li>解釋為什麼最清晰的那條線可以指出負柱鏡的軸度。</li>
+      <li>運用 ×30 法則求出軸度，並完成一次完整的鐘面圖驗光。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">What the eye sees</span><h3>散光眼看到的模糊像</h3><p>網膜落在前焦線上 → 看到某方向清楚的線；落在後焦線上 → 另一方向清楚；落在 COLC → 各方向一樣模糊。所以散光病人常說「有些方向的線比較清楚」。<b>SE 的光學意義：把 COLC 放到網膜上的球面度數</b>。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Fog first</span><h3>為什麼要先霧視</h3><p>加 <b>+0.75～+1.00</b>，讓兩條焦線都在網膜前。此時病人無法用調節把哪條線「調清楚」（調節只會讓焦線更往前），回答才可靠。前焦線離網膜較遠、<b>後焦線離網膜較近</b> → 和後焦線同方向的線最清楚。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Why ×30 gives the axis</span><h3>最清楚的線怎麼指出軸</h3><p>後焦線由<b>較弱</b>（較正）的主徑線形成，而負柱鏡軸就放在較弱的主徑線上。最清楚的線與後焦線平行，方向和負柱鏡軸<b>互相垂直</b>；鐘點數 × 30 這個換算剛好把這 90° 轉回來，所以直接得到軸度：6–12 點（垂直線）→ 180。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">Rule of 30</span><h3>三十法則</h3><p>負柱鏡軸 ＝ 最清晰線的<b>鐘點數 × 30</b>；線成對（1–7、2–8…），<b>取較小的鐘點數</b>。3–9 → 090（逆散）；6–12 → 180（順散）；1–7 → 030（斜散）。一圈 12 鐘點 ＝ 360°，每鐘點 30°。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Add cyl, keep SE</span><h3>加柱鏡、補球面</h3><p>在該軸上每次加 <b>−0.25</b> 柱鏡，把前焦線往後推向後焦線，直到所有線一樣清楚。<b>每加 −0.50 柱鏡，補 +0.25 球面</b>，COLC 才會停在原地，病人不會覺得越調越糊。最後<b>解除霧視</b>，回到 MPMVA 確認球面。</p></div>
+      <div class="concept"><span class="en-term">Read the response</span><h3>病人的回答怎麼解讀</h3><p>全部一樣清楚 → 無散光，回球面 MPMVA。<b>全部一樣模糊 → 霧視過量</b>，減少霧視重測。指的線一直換 → 霧視不足，調節在干擾。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 11-1</span><h3>霧視把焦線推到哪裡？</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><canvas id="cv-fg" aria-label="霧視與焦線"></canvas><div class="svgstage" id="fg-dial" style="padding-top:0"></div></div>
+        <div class="lab-panel">
+          <div class="patient"><small>這隻眼睛</small>−1.50 −1.50 ×180（順散）</div>
+          <div class="ctrl"><label for="fg-s">綜合驗光儀上的球面 <output id="fg-s-out"></output></label><input type="range" id="fg-s" min="-4" max="1" step="0.25" value="-2.25"></div>
+          <div class="row-btns"><button class="btn ghost" id="fg-0" type="button">回到 MPMVA（SE）</button><button class="btn ghost" id="fg-1" type="button">加 +1.00 霧視</button></div>
+          <div class="readout"><div class="row"><span>前焦線</span><b id="fg-a">—</b></div><div class="row"><span>後焦線</span><b id="fg-b">—</b></div></div>
+          <div class="verdict" id="fg-v"></div>
+        </div>
+      </div>
+      <div class="observe">
+        <div class="predict" data-answer="1">
+          <p class="q">沒有霧視（停在 SE），病人看鐘面圖會怎樣？</p>
+          <div class="opts"><button>某條線特別清楚</button><button>各方向差不多，而且一調節就變</button><button>全部看不到</button></div>
+          <p class="why">COLC 在網膜上時各方向一樣模糊；病人還能調節，回答就不穩定。</p>
+        </div>
+        <h4>觀察重點</h4><ul>
+          <li>球面往正的方向加：兩條焦線一起往前，後焦線（綠）離網膜最近 → 垂直線（6–12）最清楚 → ×30 ＝ 180。</li>
+          <li>加太多（+2 以上）：兩條都離網膜很遠，全部一樣模糊——霧視過量。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 11-2</span><h3>鐘面圖驗光全流程</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="cd-dial"></div></div>
+        <div class="lab-panel">
+          <div class="readout"><div class="row"><span>綜合驗光儀</span><b id="cd-rx" style="font-size:15px">—</b></div><div class="row"><span>步驟</span><b id="cd-st">—</b></div></div>
+          <div class="ctrl"><label>球面</label><div class="btn-grid"><button class="btn ghost" id="cd-sp" type="button">+0.25</button><button class="btn ghost" id="cd-sm" type="button">−0.25</button></div></div>
+          <div class="ctrl"><label>柱鏡軸：點鐘面圖上最黑的那條線，或</label><div class="btn-grid"><button class="btn ghost" id="cd-ask" type="button">問病人哪條最黑</button><button class="btn ghost" id="cd-cm" type="button">柱鏡 −0.25</button></div></div>
+          <div class="patient" style="background:var(--surface-2)"><small>病人說</small><span id="cd-say">—</span></div>
+          <div class="row-btns"><button class="btn ok" id="cd-end" type="button">完成，記錄度數</button><button class="btn ghost" id="cd-new" type="button">換一位</button></div>
+        </div>
+      </div>
+      <div class="logline" id="cd-log" style="margin:0 18px"></div>
+      <div class="verdict" id="cd-v" style="padding:10px 18px"></div>
+      <div class="observe">
+        <h4>流程</h4><ul>
+          <li>① 起點是最佳球面（MPMVA）→ ② 球面加 +0.75～+1.00 霧視 → ③ 問最黑的線，點它設定軸 → ④ 柱鏡每次 −0.25，直到全部一樣清楚；每 −0.50 柱鏡補 +0.25 球面 → ⑤ 解除霧視：球面一格一格收回到最佳視力。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 11-3</span><h3>三十法則速算</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="r30"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="r30-a">負柱鏡軸度</label><input class="num" type="number" id="r30-a" min="1" max="180" placeholder="例如 090"></div>
+          <div class="ctrl"><label>分類</label><div class="seg" id="r30-k"><button data-v="WTR" aria-pressed="true">順散</button><button data-v="ATR">逆散</button><button data-v="OBL">斜散</button></div></div>
+          <div class="row-btns"><button class="btn" id="r30-c" type="button">檢查</button><button class="btn ghost" id="r30-n" type="button">下一題</button></div>
+          <div class="verdict" id="r30-v"></div><div class="score-line" id="r30-s"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 11-4</span><h3>病人這樣說，代表什麼？</h3></div>
+      <div class="sim" id="d114"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>紀錄方式 <span class="tag">RECORD</span></h2>
+    <div class="rec"># 正常範例
+Clock Dial OD: 6–12 線最清晰 → axis 180
+fogging +1.00 → cyl −1.00 ×180 加入後各線等清晰
+補償球面 +0.50 → 初始度數 OD −1.50 −1.00 ×180
+# 無散光範例
+Clock Dial OS: 各線等清晰 → no cyl；OS −2.00 DS
+※ 必填：最清晰線的鐘點、霧視量、加入的柱鏡度與軸、球面補償量</div>
+  </section>
+
+  <section class="block">
+    <h2>鐘面圖常見操作錯誤 <span class="tag">MISTAKES</span></h2>
+    <div class="myths">
+      <details class="myth"><summary>霧視一點點就夠。</summary><div class="fix">霧視量不足，焦線沒全落在網膜前，病人指的線是錯的。</div></details>
+      <details class="myth"><summary>霧視越多越保險。</summary><div class="fix">霧視過量全部一樣模糊，病人無法分辨。</div></details>
+      <details class="myth"><summary>最清楚的線是 3 點鐘，軸就寫 3。</summary><div class="fix">要先乘 30：3 × 30 ＝ 090。</div></details>
+      <details class="myth"><summary>加柱鏡不用管球面。</summary><div class="fix">忘記補球面，COLC 往後跑，病人覺得越調越糊。</div></details>
+      <details class="myth"><summary>一次加 −0.50 柱鏡比較快。</summary><div class="fix">會跳過終點，散光量被高估。</div></details>
+      <details class="myth"><summary>線都一樣清楚就結束。</summary><div class="fix">還要解除霧視；否則得到的是霧視狀態的度數，不是處方。</div></details>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>練習題 <span class="tag">PRACTICE</span></h2>
+    <p class="sub">數字每次隨機。先自己算，卡住再一步一步看詳解；標 ★ 的題目沒看詳解連續全對 3 組，就算精熟。</p>
+    <div id="practice"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w11.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w11", ["鐘面圖完整操作：霧視 → 判軸 → 加柱 → 補球 → 解除霧視", "把結果和電腦驗光機的軸度、散光量比較", "差很多時想想：霧視夠不夠？病人有沒有在調節？"]); OBPractice.mount("practice", "w11"); });</script>
+<script>
+(function () {
+  const { Stage, range, seg, drill, fmt } = OL;
+  OL.levels("levels", [
+    ["★", "三十法則：鐘點數 × 30 ＝ 負柱鏡軸", "取 1–6 的鐘點"],
+    ["◆", "霧視讓兩焦線都在網膜前；後焦線方向的線最清楚", "+0.75～+1.00"],
+    ["◆", "每 −0.50 柱鏡補 +0.25 球面", "維持 SE"],
+    ["◆", "全部一樣模糊 → 霧視過量", ""],
+  ]);
+  const ax3 = (a) => String(Math.round(a)).padStart(3, "0");
+  const norm = (a) => { let x = Math.round(a) % 180; if (x <= 0) x += 180; return x; };
+  const rad = (d) => d * Math.PI / 180;
+  // 某一條主徑線 m（TABO 角度）方向的總度數：負散寫法 S、C、A
+  const pow = (S, C, A, m) => S + C * Math.pow(Math.sin(rad(m - A)), 2);
+  /* 鐘面圖：blurOf(h) 回傳 h 點鐘那條線的離焦量（D）；畫成病人看到的樣子 */
+  function dial(el, blurOf, opt = {}) {
+    const R = 118, cx = 150, cy = 150;
+    let s = `<svg viewBox="0 0 300 300" role="img" aria-label="鐘面圖" class="clk" style="max-width:340px"><circle cx="${cx}" cy="${cy}" r="${R + 24}" fill="#fff" stroke="var(--line)"/>`;
+    for (let h = 1; h <= 6; h++) {
+      const b = blurOf(h), k = Math.exp(-b * 1.6), a = rad(90 - h * 30);
+      const x1 = cx + R * Math.cos(a), y1 = cy - R * Math.sin(a);
+      s += `<line data-h="${h}" x1="${x1}" y1="${y1}" x2="${2 * cx - x1}" y2="${2 * cy - y1}" stroke="${opt.sel === h ? "var(--accent)" : `rgba(17,17,17,${(0.1 + 0.9 * k).toFixed(2)})`}" stroke-width="${(1.5 + 6 * k).toFixed(1)}" stroke-linecap="round"/>`;
+      if (opt.onPick) s += `<line class="hit" data-h="${h}" x1="${x1}" y1="${y1}" x2="${2 * cx - x1}" y2="${2 * cy - y1}" stroke="transparent" stroke-width="18" style="pointer-events:stroke"/>`;
+    }
+    for (let h = 1; h <= 12; h++) { const a = rad(90 - h * 30); s += `<text x="${cx + (R + 13) * Math.cos(a)}" y="${cy - (R + 13) * Math.sin(a) + 4}" text-anchor="middle" font-size="12" fill="#333" font-weight="700">${h}</text>`; }
+    el.innerHTML = s + "</svg>";
+    if (opt.onPick) el.querySelectorAll("line.hit").forEach((l) => l.addEventListener("click", () => opt.onPick(+l.dataset.h)));
+  }
+
+  /* ---------- LAB 11-1 ---------- */
+  const T1 = { S: -1.5, C: -1.5, A: 180 };
+  const fs = range("fg-s", (v) => fmt.s(v) + " DS", () => st1.render());
+  document.getElementById("fg-0").onclick = () => { fs.value = T1.S + T1.C / 2; st1.render(); };
+  document.getElementById("fg-1").onclick = () => { fs.value = T1.S + T1.C / 2 + 1; st1.render(); };
+  let wob = 0;
+  const st1 = new Stage("cv-fg", { xmin: -10, xmax: 14, ymin: -6, ymax: 6, aspect: 0.4, minH: 190, maxH: 280, draw: (s, c) => {
+    const L = fs.value, eWeak = T1.S - L, eStrong = T1.S + T1.C - L;     // 剩餘屈光不正：負 → 焦點在網膜前
+    const R = 7, K = 2.2, xb = R + K * eWeak, xa = R + K * eStrong;
+    s.lens(-6, 5, 4, { bulge: 6 }); s.axis({ label: false });
+    s.line(R, -5.5, R, 5.5, { color: c.retina, w: 3 }); s.text("網膜", R, 5.8, { size: 11, color: c.retina, weight: 700 });
+    const fan = (xf, col, d) => [-3.5, 3.5].forEach((y) => s.poly([[-9, y], [-6, y], [xf, 0], [13.5, -y * (13.5 - xf) / (xf + 6)]], { color: col, w: 1.6, dash: d }));
+    fan(xa, c.ray, false); fan(xb, c.ray2, [5, 4]);
+    s.point(xa, 0, "前焦線", { color: c.ray, dy: -14, font: c.body, size: 11 }); s.point(xb, 0, "後焦線", { color: c.ray2, dy: 16, font: c.body, size: 11 });
+    s.point((xa + xb) / 2, 0, "", { color: c.accent, r: 3 });
+    const fogged = eWeak <= 0.01;
+    dial(document.getElementById("fg-dial"), (h) => { let e = pow(T1.S, T1.C, T1.A, h * 30) - L; if (!fogged) e = e * (0.4 + 0.6 * Math.abs(Math.sin(wob + h))); return Math.abs(e); });
+    document.getElementById("fg-a").textContent = eStrong < 0 ? `網膜前 ${fmt.s(eStrong)}` : eStrong > 0 ? `網膜後 ${fmt.s(eStrong)}` : "網膜上";
+    document.getElementById("fg-b").textContent = eWeak < 0 ? `網膜前 ${fmt.s(eWeak)}` : eWeak > 0 ? `網膜後 ${fmt.s(eWeak)}` : "網膜上";
+    document.getElementById("fg-v").innerHTML = !fogged ? '<span class="pill warn">還沒霧視夠</span> 有焦線在網膜後，病人會調節，各線深淺一直變。' : Math.abs(eWeak) > 1.6 ? '<span class="pill warn">霧視過量</span> 全部一樣模糊。' : '<span class="pill ok">霧視到位</span> 6–12（垂直線）最黑 → 6 × 30 ＝ 180。';
+  } });
+  setInterval(() => { if (fs.value < T1.S - 0.01) { wob += 0.6; st1.render(); } }, 500);
+
+  /* ---------- LAB 11-2 ---------- */
+  let T, S, C, A, logs, sel, comp;
+  const say = (t) => document.getElementById("cd-say").textContent = t;
+  function residual(m) { return pow(T.S, T.C, T.A, m) - (S + C * Math.pow(Math.sin(rad(m - A)), 2)); }
+  function blurs() { return [1, 2, 3, 4, 5, 6].map((h) => residual(h * 30)); }
+  function newC() {
+    const A0 = [30, 60, 90, 120, 150, 180][Math.floor(Math.random() * 6)], C0 = -[0.75, 1, 1.25, 1.5, 2][Math.floor(Math.random() * 5)], S0 = -[0.5, 1, 1.5, 2, 2.5][Math.floor(Math.random() * 5)];
+    T = { S: S0, C: C0, A: A0 };
+    S = Math.round((S0 + C0 / 2) * 4) / 4; C = 0; A = 180; sel = null; comp = 0;
+    logs = [`起點：最佳球面（MPMVA）${fmt.s(S)} DS`]; say("—"); document.getElementById("cd-v").textContent = ""; draw();
+  }
+  function stage() { const b = blurs(); const mx = Math.max(...b); return mx > 0.12 ? "未霧視" : C === 0 ? "已霧視，待判軸" : "加柱鏡中"; }
+  function draw() {
+    const fogged = Math.max(...blurs()) <= 0.12;
+    dial(document.getElementById("cd-dial"), (h) => Math.abs(residual(h * 30)) * (fogged ? 1 : 0.5 + Math.random() * 0.8), { sel, onPick: (h) => { sel = h; A = h * 30; logs.push(`設定柱鏡軸：${h}–${h + 6} 線 → ${h} × 30 ＝ ${ax3(A)}`); draw(); } });
+    document.getElementById("cd-rx").textContent = C === 0 ? `${fmt.s(S)} DS` : `${fmt.s(S)} ${fmt.s(C)} ×${ax3(A)}`;
+    document.getElementById("cd-st").textContent = stage();
+    document.getElementById("cd-log").textContent = logs.join("\n"); document.getElementById("cd-log").scrollTop = 1e6;
+  }
+  function ask() {
+    const b = blurs().map((e) => Math.abs(e)), mx = Math.max(...blurs());
+    if (mx > 0.12) { const h = 1 + Math.floor(Math.random() * 6); say(`「好像是 ${h} 點……等一下，又好像 ${1 + (h + 2) % 6} 點比較黑。」`); logs.push("病人回答不穩定"); draw(); return; }
+    const mn = Math.min(...b), mxb = Math.max(...b);
+    if (mn > 1.75) say("「每一條都好模糊，看不太出來。」");
+    else if (mxb - mn < 0.2) say("「每一條都差不多黑。」");
+    else { const h = b.indexOf(mn) + 1; say(`「${h} 點到 ${h + 6} 點那條最黑最清楚。」`); }
+    draw();
+  }
+  document.getElementById("cd-ask").onclick = ask;
+  document.getElementById("cd-sp").onclick = () => { S += 0.25; logs.push(`球面 +0.25 → ${fmt.s(S)}`); ask(); };
+  document.getElementById("cd-sm").onclick = () => { S -= 0.25; logs.push(`球面 −0.25 → ${fmt.s(S)}`); ask(); };
+  document.getElementById("cd-cm").onclick = () => {
+    if (!sel) { say("（請先點選最黑的那條線，設定柱鏡軸）"); return; }
+    C -= 0.25; comp++; logs.push(`柱鏡 −0.25 → ${fmt.s(C)} ×${ax3(A)}`);
+    if (comp % 2 === 0) logs.push("　提醒：已加 −0.50 柱鏡，該補 +0.25 球面");
+    ask();
+  };
+  document.getElementById("cd-end").onclick = () => {
+    const dS = S - T.S, dC = C - T.C, axOk = Math.min(Math.abs(A - T.A), 180 - Math.abs(A - T.A)) < 1 || Math.abs(T.C) < 0.01;
+    let m = `正確度數：${fmt.s(T.S)} ${fmt.s(T.C)} ×${ax3(T.A)}。你的：${C === 0 ? fmt.s(S) + " DS" : `${fmt.s(S)} ${fmt.s(C)} ×${ax3(A)}`}。`;
+    const issues = [];
+    if (!axOk) issues.push("軸度不對：要在霧視後問最黑的線，再 ×30");
+    if (Math.abs(dC) > 0.01) issues.push(dC < 0 ? "柱鏡給太多（一次加太快、或沒看「全部一樣」）" : "柱鏡不足：還沒到各線一樣清楚");
+    if (dS > 0.01) issues.push("球面太正：可能還沒解除霧視");
+    if (dS < -0.01) issues.push("球面太負：解除霧視時收過頭，或加柱鏡沒補球面");
+    document.getElementById("cd-v").innerHTML = (issues.length ? '<span class="pill warn">再檢查</span> ' + m + " " + issues.join("；") + "。" : '<span class="pill ok">完全正確</span> ' + m);
+  };
+  document.getElementById("cd-new").onclick = newC; newC();
+
+  /* ---------- LAB 11-3 ---------- */
+  const rk = seg("r30-k"); let h3, ok3 = 0, n3 = 0;
+  const kind = (a) => (a <= 30 || a >= 150) ? "WTR" : (a >= 60 && a <= 120) ? "ATR" : "OBL";
+  function new3() { h3 = 1 + Math.floor(Math.random() * 6); dial(document.getElementById("r30"), (h) => Math.min(3, Math.abs(Math.sin(rad((h - h3) * 30))) * 2.2)); document.getElementById("r30-a").value = ""; document.getElementById("r30-v").textContent = ""; }
+  document.getElementById("r30-c").onclick = () => {
+    const a = +document.getElementById("r30-a").value, ax = h3 * 30, good = a === ax && rk.value === kind(ax); n3++; if (good) ok3++;
+    document.getElementById("r30-v").innerHTML = (good ? '<span class="pill ok">正確</span> ' : '<span class="pill bad">再想想</span> ') + `最黑：${h3}–${h3 + 6} 線 → ${h3} × 30 ＝ ${ax3(ax)}，${{ WTR: "順散", ATR: "逆散", OBL: "斜散" }[kind(ax)]}。`;
+    document.getElementById("r30-s").textContent = `答對 ${ok3} / ${n3}`;
+  };
+  document.getElementById("r30-n").onclick = new3; new3();
+
+  drill("d114", ["無散光，回到球面 MPMVA", "霧視過量，減少霧視重測", "霧視不足，調節在干擾", "繼續加負柱鏡", "柱鏡加過頭"], [
+    { q: "霧視後：「每一條都一樣黑、一樣清楚。」", a: 0, why: "全部一樣清楚 → 無散光。" },
+    { q: "霧視 +2.50 後：「每一條都好模糊，分不出來。」", a: 1, why: "全部一樣模糊 → 霧視過量。" },
+    { q: "「一下子覺得 2 點黑，一下子又覺得 5 點黑。」", a: 2, why: "焦線還有在網膜後的，病人用調節在換。" },
+    { q: "在 180 加了 −0.50 柱鏡：「垂直那條還是比較黑。」", a: 3, why: "還沒到各線等清晰，繼續 −0.25（記得補球面）。" },
+    { q: "原本 6–12 最黑，加到 −1.50 後：「現在 3–9 那條變最黑了。」", a: 4, why: "最黑的線轉了 90°：柱鏡給過頭，退回一格。" },
+  ], { unit: "病人說" });
+})();
+</script>
+</body>
+</html>

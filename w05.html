@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W05 屈光不正：散光與光學十字｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>#st-x svg { max-width: 320px; } .ab { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; } .ab .readout b { font-size: 15px; } @media (max-width:520px){ .ab { grid-template-columns: 1fr; } }</style>
+</head>
+<body data-chapter="w05">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 05</div>
+    <h1>屈光不正：散光與光學十字</h1>
+    <div class="en">Astigmatism &amp; the Power Cross</div>
+    <p class="lede">散光眼有兩條屈光力不同的<b>主徑線</b>，光不會聚成一點，而是前後兩條<b>焦線</b>。兩條焦線之間是 <b>Sturm 間隙</b>，中間是<b>最小模糊圈 COLC</b>。這一張圖，決定了第 11 週鐘面圖和第 12 週 JCC 的所有操作邏輯。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>區分規則與不規則散光，並依軸度與焦線位置完成兩套分類。</li>
+      <li>畫出 Sturm 間隙，說明最小模糊圈的位置與臨床意義。</li>
+      <li>以三步驟完成正負散光處方互換，並計算等價球面。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">Astigmatism</span><h3>什麼是散光</h3><p>屈光面在不同方向曲率不同，形成兩條屈光力不同的<b>主徑線</b>。交角 90° → <b>規則散光</b>；不是 90° → <b>不規則散光</b>（圓錐角膜、角膜疤痕、術後、嚴重乾眼），柱面鏡無法完全矯正，考慮 RGP 或轉介。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Focal lines</span><h3>前焦線、後焦線</h3><p>屈光力<b>較強</b>的主徑線先聚焦 → 前焦線；<b>較弱</b>的後聚焦 → 後焦線。關鍵一句：<b>焦線的方向與造成它的主徑線互相垂直</b>——垂直徑線形成水平焦線。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Interval of Sturm · COLC</span><h3>Sturm 間隙與最小模糊圈</h3><p>兩條焦線之間的距離，以屈光度計就等於<b>散光量</b>。間隙中央（以屈光度計）是<b>最小模糊圈</b>：截面最接近圓、影像最清楚。網膜落在 COLC 時，各方向一樣模糊。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">Spherical equivalent</span><h3>等價球面 SE</h3><p><b>SE ＝ 球面 ＋ 柱面 ÷ 2</b>，光學意義是把 COLC 放到網膜上的球面度數。用途：驗算換算、JCC 的球面補償、散光降量處方、研究統計。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">WTR · ATR · OBL</span><h3>依軸度分類</h3><p><b>順散 WTR</b>：垂直屈光力較強，負柱鏡軸約 180 ± 30。<b>逆散 ATR</b>：水平較強，軸約 090 ± 30。<b>斜散 OBL</b>：軸約 030–060、120–150。判讀時以「哪條主徑線較強」為準。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">SMA · SHA · CMA · CHA · MA</span><h3>依焦線位置分類</h3><p>一條在網膜上、一條在前 → <b>單純近視散光</b>；一條在網膜上、一條在後 → <b>單純遠視散光</b>；兩條都在前 → <b>複合近視</b>；兩條都在後 → <b>複合遠視</b>；一前一後 → <b>混合散光</b>。訣竅：看「球面」與「球面＋柱面」兩個值的正負號。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Power cross</span><h3>光學十字</h3><p>兩條線代表兩條主徑線，線上寫該徑線的總屈光力。<b>柱鏡的「軸」與「發揮度數的方向」差 90°</b>：−1.00 × 180 表示 180 方向不加度數、090 方向加 −1.00 D。</p></div>
+      <div class="concept"><span class="lvtag lv-s">★ 要會算</span><span class="en-term">Transposition</span><h3>正負散換算三步驟</h3><p>① 球面 ＋ 柱面 ＝ 新球面。② 柱面變號。③ 軸度 ＋ 90（超過 180 扣 180）。驗算：兩種寫法的 SE 必須相同。講義原例：+2.00 +1.00 ×080 ↔ +3.00 −1.00 ×170。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 5-1</span><h3>Sturm 光錐：網膜放在哪裡？</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><canvas id="cv-st" aria-label="Sturm 光錐"></canvas><div class="svgstage" id="st-x" style="padding-top:0"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="st-v">垂直徑線（090）需要的矯正 <output id="st-v-out"></output></label><input type="range" id="st-v" min="-5" max="3" step="0.25" value="-3"></div>
+          <div class="ctrl"><label for="st-h">水平徑線（180）需要的矯正 <output id="st-h-out"></output></label><input type="range" id="st-h" min="-5" max="3" step="0.25" value="-1"></div>
+          <div class="ctrl"><label for="st-s">在眼前加一片球面鏡 <output id="st-s-out"></output></label><input type="range" id="st-s" min="-5" max="5" step="0.25" value="0"></div>
+          <div class="readout">
+            <div class="row"><span>處方（負散）</span><b id="st-rx">—</b></div>
+            <div class="row"><span>散光量／SE</span><b id="st-se">—</b></div>
+            <div class="row"><span>焦線分類</span><b id="st-k">—</b></div>
+            <div class="row"><span>網膜上的影像</span><b id="st-img">—</b></div>
+          </div>
+          <div class="row-btns"><button class="btn ghost" id="st-colc" type="button">把 COLC 放到網膜上</button></div>
+        </div>
+      </div>
+      <div class="observe">
+        <div class="predict" data-answer="0">
+          <p class="q">垂直徑線較強（順散）。前焦線的方向是？</p>
+          <div class="opts"><button>水平</button><button>垂直</button><button>45°</button></div>
+          <p class="why">前焦線由較強的垂直徑線形成，焦線方向與徑線垂直 → 水平。這也是順散病人常說「垂直線比較清楚」的原因之一：網膜靠近後焦線（垂直）時，垂直線較清楚。</p>
+        </div>
+        <h4>觀察重點</h4><ul>
+          <li>加球面鏡（下方滑桿）：兩條焦線一起前後移動，間隙長度不變——球面改不了散光量。</li>
+          <li>按「把 COLC 放到網膜上」：所加的球面剛好讓 SE 歸零，網膜上的影像變成最小的圓。</li>
+          <li>下方小圖是網膜上光斑的形狀：線、橢圓或圓。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 5-2</span><h3>光學十字 ↔ 處方</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="pc-svg"></div></div>
+        <div class="lab-panel">
+          <div class="ctrl"><label for="pc-s">球面 <output id="pc-s-out"></output></label><input type="range" id="pc-s" min="-6" max="4" step="0.25" value="-2"></div>
+          <div class="ctrl"><label for="pc-c">柱面 <output id="pc-c-out"></output></label><input type="range" id="pc-c" min="-4" max="4" step="0.25" value="-1"></div>
+          <div class="ctrl"><label for="pc-a">軸度 <output id="pc-a-out"></output></label><input type="range" id="pc-a" min="5" max="180" step="5" value="180"></div>
+          <div class="ab">
+            <div class="readout"><div class="row"><span>負散寫法</span></div><b id="pc-m">—</b></div>
+            <div class="readout"><div class="row"><span>正散寫法</span></div><b id="pc-p">—</b></div>
+          </div>
+          <div class="readout"><div class="row"><span>SE</span><b id="pc-se">—</b></div><div class="row"><span>軸度分類</span><b id="pc-k">—</b></div></div>
+        </div>
+      </div>
+      <div class="observe">
+        <h4>觀察重點</h4><ul>
+          <li>十字上的數字是「該方向的總度數」。軸那條線上寫的是球面；垂直於軸的那條是球面＋柱面。</li>
+          <li>切換柱面正負號：十字完全不變——同一副眼鏡兩種寫法，度數完全相同。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 5-3</span><h3>正負散換算三步驟</h3><span class="lvtag lv-s">★ 要會算</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="sim" style="align-content:start">
+          <div class="patient"><small>原處方</small><span id="tp-q" style="font-family:var(--font-mono);font-size:20px"></span></div>
+          <div class="rxgrid"><b></b><b>新球面</b><b>新柱面</b><b>新軸度</b><b>SE 驗算</b>
+            <b>答</b><input id="tp-s" inputmode="decimal" aria-label="新球面"><input id="tp-c" inputmode="decimal" aria-label="新柱面"><input id="tp-a" inputmode="numeric" aria-label="新軸度"><input id="tp-e" inputmode="decimal" aria-label="等價球面"></div>
+          <ol class="prob-steps" id="tp-steps"></ol>
+        </div></div>
+        <div class="lab-panel">
+          <div class="row-btns"><button class="btn" id="tp-c1" type="button">檢查</button><button class="btn ghost" id="tp-n" type="button">換一題</button></div>
+          <div class="ctrl"><label class="check"><input type="checkbox" id="tp-book"> 只出講義的十題回家作業</label></div>
+          <div class="verdict" id="tp-v"></div>
+          <div class="score-line" id="tp-sc"></div>
+        </div>
+      </div>
+      <div class="observe">
+        <h4>提醒</h4><ul>
+          <li>球面算出來是 0 時寫 <b>plano</b> 或 ±0.00，不可省略。軸度一律三位數：005 不可寫成 5。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 5-4</span><h3>五種焦線分類</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="fl-svg"></div></div>
+        <div class="lab-panel">
+          <div class="patient"><small>處方</small><span id="fl-q" style="font-family:var(--font-mono);font-size:18px"></span></div>
+          <div class="ctrl"><div class="chips" id="fl-o"></div></div>
+          <div class="row-btns"><button class="btn ghost" id="fl-n" type="button">下一題</button></div>
+          <div class="verdict" id="fl-v"></div>
+          <div class="score-line" id="fl-s"></div>
+        </div>
+      </div>
+      <div class="observe">
+        <h4>判斷訣竅</h4><ul>
+          <li>算出兩條主徑線的度數：「球面」和「球面＋柱面」。兩個都負 → CMA；都正 → CHA；一個 0 一個負 → SMA；一個 0 一個正 → SHA；一正一負 → MA。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>紀錄方式 <span class="tag">RECORD</span></h2>
+    <div class="rec"># 正常範例（規則散光，順散）
+OD  −2.00 −0.75 × 180    WTR    VAcc 1.0 @D    SE −2.375
+OS  −1.75 −0.50 × 175    WTR    VAcc 1.0 @D    SE −2.00
+# 異常範例（不規則散光，需轉介）
+OD  −3.50 −2.75 × 042    OBL    VAcc 0.6 @D（無法矯正至 0.8 以上）
+Note: 主徑線交角非 90 度，疑似不規則散光，建議角膜地形圖檢查
+※ 必填：球面／柱面／軸度、順逆斜散判定、矯正視力、必要時等價球面</div>
+  </section>
+
+  <section class="block">
+    <h2>散光判讀與換算常見錯誤 <span class="tag">MISTAKES</span></h2>
+    <div class="myths">
+      <details class="myth"><summary>軸度 5 度寫「5」就好。</summary><div class="fix">一律三位數 005，否則配鏡端可能誤讀為 50 度。</div></details>
+      <details class="myth"><summary>換算只要柱面變號、軸度加 90。</summary><div class="fix">第一步「球面加柱面」最常漏掉，度數整個偏掉。</div></details>
+      <details class="myth"><summary>軸度加 90 得到 250 也可以。</summary><div class="fix">超過 180 要扣 180：250 → 070。</div></details>
+      <details class="myth"><summary>柱鏡的軸就是它發揮度數的方向。</summary><div class="fix">差 90°。把軸當成度數方向，順散逆散會判反。</div></details>
+      <details class="myth"><summary>同一份紀錄正散負散混著寫沒關係。</summary><div class="fix">後續 JCC 與試戴的基準會不一致。業界多以負散表達。</div></details>
+      <details class="myth"><summary>矯正不到 0.8 就繼續加散光。</summary><div class="fix">應先懷疑不規則散光並轉介（角膜地形圖）。</div></details>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>練習題 <span class="tag">PRACTICE</span></h2>
+    <p class="sub">數字每次隨機。先自己算，卡住再一步一步看詳解；標 ★ 的題目沒看詳解連續全對 3 組，就算精熟。</p>
+    <div id="practice"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w05.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w05", ["鐘面圖實測同學的散光軸度（霧視 → 找最清楚的線 → ×30）", "把結果畫成光學十字，判定順散／逆散／斜散", "本週先熟悉判讀；完整的鐘面圖驗光在第 11 週"]); OBPractice.mount("practice", "w05"); });</script>
+<script>
+(function () {
+  const { Stage, range, check, fmt, shuffle } = OL;
+  OL.levels("levels", [
+    ["★", "正負散換算三步驟", "球面加柱面、柱面變號、軸加 90"],
+    ["★", "SE ＝ 球面 ＋ 柱面 ÷ 2", "COLC 放到網膜上的度數"],
+    ["◆", "焦線方向與主徑線垂直；Sturm 間隙 ＝ 散光量", ""],
+    ["◆", "WTR／ATR／OBL 與 SMA／SHA／CMA／CHA／MA", "兩套分類"],
+    ["○", "不規則散光的處理", "RGP、轉介"],
+  ]);
+  const ax3 = (a) => String(Math.round(a)).padStart(3, "0");
+  const norm = (a) => { let x = Math.round(a) % 180; if (x <= 0) x += 180; return x; };
+  const sph = (v) => Math.abs(v) < 0.005 ? "plano" : fmt.s(v);
+  const kindAx = (ax) => (ax <= 30 || ax >= 150) ? "順散 WTR" : (ax >= 60 && ax <= 120) ? "逆散 ATR" : "斜散 OBL";
+  function kindFL(a, b) {   // a, b：兩條主徑線的矯正度數
+    const z = (v) => Math.abs(v) < 0.005;
+    if (z(a) && z(b)) return ["正視", -1];
+    if (Math.abs(a - b) < 0.005) return [a < 0 ? "近視（無散光）" : "遠視（無散光）", -1];
+    if ((z(a) && b < 0) || (z(b) && a < 0)) return ["單純近視散光 SMA", 0];
+    if ((z(a) && b > 0) || (z(b) && a > 0)) return ["單純遠視散光 SHA", 1];
+    if (a < 0 && b < 0) return ["複合近視散光 CMA", 2];
+    if (a > 0 && b > 0) return ["複合遠視散光 CHA", 3];
+    return ["混合散光 MA", 4];
+  }
+
+  /* ---------- LAB 5-1 ---------- */
+  const sv = range("st-v", fmt.D, () => st.render()), sh = range("st-h", fmt.D, () => st.render()), ss = range("st-s", fmt.D, () => st.render());
+  document.getElementById("st-colc").onclick = () => { ss.value = -((sv.value + sh.value) / 2); st.render(); };
+  const K = 2.2;  // 每 1 D 對應的示意距離
+  const st = new Stage("cv-st", { xmin: -14, xmax: 16, ymin: -7, ymax: 7, aspect: 0.48, minH: 220, maxH: 320, draw: (s, c) => {
+    const ev = sv.value + ss.value, eh = sh.value + ss.value;  // 加了鏡片之後剩下的屈光不正
+    const R = 6, xv = R + K * ev, xh = R + K * eh;            // 負的（近視）→ 焦點在網膜前
+    s.lens(-6, 5.5, 4, { bulge: 6 });
+    s.axis({ label: false });
+    s.line(R, -6.5, R, 6.5, { color: c.retina, w: 3 }); s.text("網膜", R, 6.8, { size: 11, color: c.retina, weight: 700 });
+    const fan = (xf, col, dash) => [-4, 4].forEach((y) => { const xe = 15; s.poly([[-13, y], [-6, y], [xf, 0], [xe, -y * (xe - xf) / (xf + 6)]], { color: col, w: 1.6, dash }); });
+    fan(xv, c.ray, false); fan(xh, c.ray2, [5, 4]);
+    s.point(xv, 0, "", { color: c.ray }); s.point(xh, 0, "", { color: c.ray2 });
+    s.text("垂直徑線 → 水平焦線", xv, -5.2, { size: 11, color: c.ray, bg: c.bg });
+    s.text("水平徑線 → 垂直焦線", xh, 5.4, { size: 11, color: c.ray2, bg: c.bg });
+    const xc = (xv + xh) / 2; if (Math.abs(xv - xh) > 0.4) { s.point(xc, 0, "COLC", { color: c.accent, dy: 16, size: 11 }); s.line(Math.min(xv, xh), -6.2, Math.max(xv, xh), -6.2, { color: c.muted, w: 1 }); s.text("Sturm 間隙", xc, -6.6, { size: 10, color: c.muted }); }
+    // 截面
+    const wv = Math.min(60, Math.abs(ev) * 18), wh = Math.min(60, Math.abs(eh) * 18);   // 垂直方向高度、水平方向寬度
+    let svg = `<svg viewBox="0 0 320 120" role="img" aria-label="網膜上的光斑"><rect x="0" y="0" width="320" height="120" fill="none"/>`;
+    svg += `<ellipse cx="160" cy="60" rx="${Math.max(1.5, wh / 2)}" ry="${Math.max(1.5, wv / 2)}" fill="var(--ray)" opacity="0.7"/><text x="10" y="114" font-size="11" fill="var(--muted)">網膜上的光斑（從病人前方看）</text></svg>`;
+    document.getElementById("st-x").innerHTML = svg;
+    const S0 = Math.max(sv.value, sh.value), C0 = -Math.abs(sv.value - sh.value), A0 = sh.value >= sv.value ? 180 : 90;
+    document.getElementById("st-rx").textContent = Math.abs(C0) < 0.01 ? `${sph(S0)} DS` : `${sph(S0)} ${fmt.s(C0)} ×${ax3(A0)}`;
+    document.getElementById("st-se").textContent = `${Math.abs(C0).toFixed(2)}／${fmt.s(S0 + C0 / 2, 3)}`;
+    document.getElementById("st-k").textContent = kindFL(ev, eh)[0] + (Math.abs(C0) > 0.01 ? "・" + (sv.value < sh.value ? "WTR" : "ATR") : "");
+    const tol = 0.13;
+    document.getElementById("st-img").textContent = Math.abs(ev) < tol && Math.abs(eh) < tol ? "清楚的一點" : Math.abs(ev) < tol ? "水平線（前／後焦線）" : Math.abs(eh) < tol ? "垂直線" : Math.abs(Math.abs(ev) - Math.abs(eh)) < tol && ev * eh < 0 ? "圓（COLC）" : (wh > wv ? "橫的橢圓" : "直的橢圓");
+  } });
+
+  /* ---------- LAB 5-2 ---------- */
+  const ps = range("pc-s", fmt.D, draw2), pcy = range("pc-c", fmt.D, draw2), pa = range("pc-a", (v) => ax3(v), draw2);
+  function draw2() {
+    const S = ps.value, C = pcy.value, A = pa.value, A2 = norm(A + 90);
+    const R = 115, cx = 200, cy = 150, P = (d, r) => [cx + r * Math.cos(d * Math.PI / 180), cy - r * Math.sin(d * Math.PI / 180)];
+    const ln = (d, col, val, lab) => { const [x1, y1] = P(d, R), [x2, y2] = P(d + 180, R), [tx, ty] = P(d, R + 26), [lx, ly] = P(d + 180, R + 20); return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="4" stroke-linecap="round"/><text x="${tx}" y="${ty + 5}" text-anchor="middle" font-size="15" font-weight="700" fill="${col}" font-family="var(--font-mono)">${val}</text><text x="${lx}" y="${ly + 4}" text-anchor="middle" font-size="11" fill="var(--muted)">${lab}</text>`; };
+    let s = `<svg viewBox="0 0 400 330" role="img" aria-label="光學十字">`;
+    s += ln(A, "var(--accent)", sph(S), "軸 " + ax3(A)) + ln(A2, "var(--ray)", sph(S + C), ax3(A2));
+    s += `<text x="200" y="324" text-anchor="middle" font-size="11" fill="var(--muted)">藍線：軸的方向（只有球面）；橘線：柱面發揮度數的方向</text></svg>`;
+    document.getElementById("pc-svg").innerHTML = s;
+    const minus = C <= 0 ? [S, C, A] : [S + C, -C, A2], plus = C >= 0 ? [S, C, A] : [S + C, -C, A2];
+    const w = (r) => Math.abs(r[1]) < 0.005 ? `${sph(r[0])} DS` : `${sph(r[0])} ${fmt.s(r[1])} ×${ax3(r[2])}`;
+    document.getElementById("pc-m").textContent = w(minus); document.getElementById("pc-p").textContent = w(plus);
+    document.getElementById("pc-se").textContent = fmt.s(S + C / 2, 3);
+    document.getElementById("pc-k").textContent = Math.abs(C) < 0.005 ? "無散光" : kindAx(minus[2]);
+  }
+  draw2();
+
+  /* ---------- LAB 5-3 ---------- */
+  const BOOK = [[-1.5, -1, 180], [-2.75, -1.25, 90], [3, -3, 90], [1.5, -3, 45], [-4.25, -1.25, 120], [1, 1.5, 180], [0.25, 1.25, 90], [-1, 0.25, 45], [-1.25, 2.75, 135], [-4.75, 7.75, 5]];
+  let Q, okT = 0, nT = 0, bi = 0;
+  const book = check("tp-book", () => { bi = 0; newT(); });
+  const P = (v) => parseFloat(String(v).replace(/[−–]/g, "-").replace(/plano|pl/i, "0"));
+  function newT() {
+    if (book.value) { Q = BOOK[bi % BOOK.length]; bi++; }
+    else { const r = (a, b, st) => a + st * Math.floor(Math.random() * ((b - a) / st + 1)); Q = [r(-6, 4, 0.25), r(0.5, 4, 0.25) * (Math.random() < 0.5 ? -1 : 1), r(5, 180, 5)]; }
+    document.getElementById("tp-q").textContent = `${sph(Q[0])} ${fmt.s(Q[1])} ×${ax3(Q[2])}`;
+    ["tp-s", "tp-c", "tp-a", "tp-e"].forEach((id) => { const e = document.getElementById(id); e.value = ""; e.className = ""; });
+    document.getElementById("tp-steps").innerHTML = ""; document.getElementById("tp-v").textContent = "";
+  }
+  document.getElementById("tp-c1").onclick = () => {
+    const [S, C, A] = Q, S2 = S + C, C2 = -C, A2 = norm(A + 90), se = S + C / 2;
+    const chk = [["tp-s", S2, 0.01], ["tp-c", C2, 0.01], ["tp-a", A2, 0.5], ["tp-e", se, 0.01]].map(([id, v, t]) => { const e = document.getElementById(id), g = Math.abs(P(e.value) - v) <= t; e.className = g ? "ok" : "bad"; return g; });
+    const all = chk.every(Boolean); nT++; if (all) okT++;
+    document.getElementById("tp-steps").innerHTML = [
+      ["① 球面 ＋ 柱面", `${fmt.s(S)} + ${fmt.s(C)} ＝ ${sph(S2)}`], ["② 柱面變號", `${fmt.s(C)} → ${fmt.s(C2)}`],
+      ["③ 軸度 ＋ 90", `${A} + 90 ＝ ${A + 90}${A + 90 > 180 ? " − 180 ＝ " + A2 : ""} → ${ax3(A2)}`], ["驗算 SE", `${fmt.s(S)} + ${fmt.s(C)} ÷ 2 ＝ ${fmt.s(se, 3)}`],
+    ].map(([a, b], i) => `<li><div class="sc">${a}${chk[i] ? "　✓" : ""}</div><div class="se">${b}</div></li>`).join("");
+    document.getElementById("tp-v").innerHTML = all ? `<span class="pill ok">全部正確</span> ${sph(S2)} ${fmt.s(C2)} ×${ax3(A2)}` : '<span class="pill bad">有錯</span> 紅框的欄位對照右邊步驟再算一次。';
+    document.getElementById("tp-sc").textContent = `全對 ${okT} / ${nT}`;
+  };
+  document.getElementById("tp-n").onclick = newT; newT();
+
+  /* ---------- LAB 5-4 ---------- */
+  const OPTS = ["SMA 單純近視散光", "SHA 單純遠視散光", "CMA 複合近視散光", "CHA 複合遠視散光", "MA 混合散光"];
+  let F, okF = 0, nF = 0;
+  function newF() {
+    const k = Math.floor(Math.random() * 5), c = [0.75, 1, 1.5, 2, 2.5][Math.floor(Math.random() * 5)], q = (a, b) => a + 0.25 * Math.floor(Math.random() * ((b - a) / 0.25 + 1));
+    let a, b; // a = 球面（較正那條），b = a − c
+    if (k === 0) a = 0; else if (k === 1) a = c; else if (k === 2) a = -q(0.25, 3); else if (k === 3) a = c + q(0.25, 2); else a = q(0.25, c - 0.25);
+    b = a - c;
+    const A = [180, 90, 175, 10, 45, 135, 85, 165][Math.floor(Math.random() * 8)];
+    const plusForm = Math.random() < 0.35;
+    F = { a, b, A, k };
+    document.getElementById("fl-q").textContent = plusForm ? `${sph(b)} ${fmt.s(c)} ×${ax3(norm(A + 90))}` : `${sph(a)} ${fmt.s(-c)} ×${ax3(A)}`;
+    document.getElementById("fl-o").innerHTML = OPTS.map((o, j) => `<button type="button" class="chip" data-j="${j}">${o}</button>`).join("");
+    document.getElementById("fl-o").querySelectorAll("button").forEach((x) => x.onclick = () => ans(+x.dataset.j, x));
+    document.getElementById("fl-v").textContent = ""; drawF(false);
+  }
+  function drawF(show) {
+    const R = 210, X = (d) => R - d * 38;   // 近視（負）→ 網膜前（左邊）
+    let s = `<svg viewBox="0 0 420 150" role="img" aria-label="焦線位置"><line x1="20" y1="75" x2="400" y2="75" stroke="var(--line)" stroke-dasharray="6 4"/><line x1="${R}" y1="20" x2="${R}" y2="130" stroke="var(--retina)" stroke-width="3"/><text x="${R}" y="146" text-anchor="middle" font-size="11" fill="var(--retina)">網膜</text><text x="30" y="20" font-size="11" fill="var(--muted)">← 網膜前</text><text x="390" y="20" font-size="11" text-anchor="end" fill="var(--muted)">網膜後 →</text>`;
+    if (show) [[F.a, "var(--ray-2)"], [F.b, "var(--ray)"]].forEach(([d, col], i) => { const x = X(d); s += `<line x1="${x}" y1="${45 + i * 10}" x2="${x}" y2="${105 - i * 10}" stroke="${col}" stroke-width="5" stroke-linecap="round"/><text x="${x}" y="${38 + i * 92}" text-anchor="middle" font-size="11" fill="${col}" font-family="var(--font-mono)">${sph(d)}</text>`; });
+    else s += `<text x="105" y="110" text-anchor="middle" font-size="12" fill="var(--muted)">作答後顯示兩條焦線的位置</text>`;
+    document.getElementById("fl-svg").innerHTML = s + "</svg>";
+  }
+  function ans(j, btn) {
+    nF++; if (j === F.k) okF++; else btn.classList.add("bad");
+    document.getElementById("fl-o").querySelectorAll("button").forEach((x) => { x.disabled = true; if (+x.dataset.j === F.k) x.classList.add("ok"); });
+    document.getElementById("fl-v").innerHTML = (j === F.k ? '<span class="pill ok">正確</span> ' : '<span class="pill bad">再想想</span> ') + `兩條主徑線：${sph(F.a)} 與 ${sph(F.b)} → ${OPTS[F.k]}。`;
+    document.getElementById("fl-s").textContent = `答對 ${okF} / ${nF}`; drawF(true);
+  }
+  document.getElementById("fl-n").onclick = newF; newF();
+})();
+</script>
+</body>
+</html>

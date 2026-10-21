@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="assets/analytics.js"></script>
+<title>W15 雙眼平衡檢查｜視光學（一）・無邊界教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body data-chapter="w15">
+<header id="topbar"></header>
+<main class="wrap">
+  <div class="chapter-head">
+    <div class="eyebrow">Week 15</div>
+    <h1>雙眼平衡檢查</h1>
+    <div class="en">Binocular Balance: Equal Effort for Both Eyes</div>
+    <p class="lede">單眼各自做到最好，兩眼打開時卻不一定協調。雙眼平衡的操作定義：<b>使雙眼的視覺刺激引起的調節相等</b>——兩眼都打開時，處在最大放鬆、調節反應一致。本課程的標準作法是<b>稜鏡分離法</b>。</p>
+  </div>
+
+  <section class="block">
+    <h2>學習目標 <span class="tag">GOALS</span></h2>
+    <ul class="goals">
+      <li>說出雙眼不平衡會造成的七類問題，並理解其生理基礎。</li>
+      <li>區分同時視、融像與立體視，並說明它們的依存關係。</li>
+      <li>完成稜鏡分離法的標準操作，並知道其他五種方法的適用時機。</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>本週記號 <span class="tag">★ ◆ ○</span></h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="block">
+    <h2>核心觀念 <span class="tag">KEY IDEAS</span></h2>
+    <div class="concepts">
+      <div class="concept"><span class="en-term">Why balance</span><h3>不平衡會怎樣</h3><p>七類問題：視覺疲勞、雙眼協調下降（複視或抑制）、立體視受損、清晰度不足、偏頭痛與不適、未考慮主力眼、日常需求不合。即使矯正視力達標，病人仍可能覺得不舒服。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Three stages</span><h3>立體視三階段</h3><p>① <b>同時視</b>：兩眼同時接收影像，沒有一眼被抑制。② <b>融像</b>：大腦融合成單一影像。③ <b>立體視</b>：由網膜像差算出深度，最高階段。<b>前階段異常，後階段無法建立</b>。</p></div>
+      <div class="concept"><span class="en-term">Sensory &amp; motor</span><h3>感覺融像與運動融像</h3><p><b>感覺融像</b>：大腦整合，需要兩眼影像的大小、清晰度、亮度相近，屈光參差過大最容易失敗。<b>運動融像</b>：眼球協調、聚散系統，可用稜鏡量化。粗略立體視 vs 精細立體視（針線穿孔）。</p></div>
+      <div class="concept"><span class="lvtag lv-d">◆ 要看懂</span><span class="en-term">Prism dissociation</span><h3>稜鏡分離法</h3><p>雙眼霧視 <b>+0.75</b>（必要時續加 +0.25，直到視力 20/25 或更差）→ <b>OD 3Δ BU、OS 3Δ BD</b> → 看到上下兩行 → <b>較清楚那眼加 +0.25</b> → 直到一樣模糊；不能一樣時讓<b>主利眼稍清楚</b> → <b>移除稜鏡</b>。</p></div>
+      <div class="concept"><span class="en-term">Which row is which</span><h3>哪一行是哪隻眼？</h3><p>稜鏡把影像往<b>尖端</b>方向移：OD 基底朝上 → 右眼看到的那行<b>在下面</b>；OS 基底朝下 → 左眼的那行<b>在上面</b>。搞清楚再加度數，否則方向會反。</p></div>
+      <div class="concept"><span class="en-term">Dominant eye</span><h3>主利眼的用途</h3><p>雙手伸直、雙眼打開，透過小窗口看目標，遮一眼：遮右眼仍看得到 → 主利眼是左眼。兩邊各一半 → 窗口縮小重測。無法完全平衡時，把稍微清楚的那一點留給主利眼。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>互動實驗 <span class="tag">LAB</span></h2>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 15-1</span><h3>稜鏡分離法模擬</h3><span class="lvtag lv-d">◆ 要看懂</span></div>
+      <div class="lab-body">
+        <div class="lab-stage"><div class="svgstage" id="bb-svg"></div></div>
+        <div class="lab-panel">
+          <div class="readout"><div class="row"><span>OD</span><b id="bb-od">—</b></div><div class="row"><span>OS</span><b id="bb-os">—</b></div><div class="row"><span>稜鏡</span><b id="bb-pr">—</b></div></div>
+          <div class="btn-grid"><button class="btn ghost" id="bb-fog" type="button">雙眼 +0.75 霧視</button><button class="btn ghost" id="bb-fog2" type="button">雙眼再 +0.25</button><button class="btn ghost" id="bb-pin" type="button">放入 3BU／3BD</button><button class="btn ghost" id="bb-pout" type="button">移除稜鏡</button></div>
+          <div class="btn-grid"><button class="btn" id="bb-r" type="button">OD +0.25</button><button class="btn" id="bb-l" type="button">OS +0.25</button></div>
+          <div class="patient" style="background:var(--surface-2)"><small>病人說</small><span id="bb-say">—</span></div>
+          <div class="row-btns"><button class="btn ok" id="bb-end" type="button">完成平衡</button><button class="btn ghost" id="bb-new" type="button">換一位</button></div>
+        </div>
+      </div>
+      <div class="logline" id="bb-log" style="margin:0 18px"></div>
+      <div class="verdict" id="bb-v" style="padding:10px 18px"></div>
+      <div class="observe">
+        <div class="predict" data-answer="1">
+          <p class="q">放入 OD 3BU／OS 3BD 後，病人說「上面那行比較清楚」。要在哪一眼加 +0.25？</p>
+          <div class="opts"><button>OD（右眼）</button><button>OS（左眼）</button><button>兩眼都加</button></div>
+          <p class="why">OS 基底朝下 → 左眼看到的影像往上移，上面那行是左眼。較清楚那眼加正度數 → OS +0.25。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 15-2</span><h3>立體視三階段</h3></div>
+      <div class="sim"><div id="o152"></div><div style="margin-top:8px"><b>症狀出在哪一階段？</b></div><div id="d152"></div></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 15-3</span><h3>六種平衡方法配對</h3></div>
+      <div class="sim" id="d153"></div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-head"><span class="lab-no">LAB 15-4</span><h3>主利眼測試</h3></div>
+      <div class="sim" id="d154"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>六種雙眼平衡方法 <span class="tag">SIX METHODS</span></h2>
+    <div class="terms-wrap"><table class="terms"><tr><th>方法</th><th>做法</th><th>應用</th></tr>
+      <tr><td>交替遮蓋法</td><td>雙眼相同矯正，快速交替遮蓋，比較清晰度或協作感</td><td>確認沒有顯著抑制或模糊；適合初次配鏡</td></tr>
+      <tr><td>偏光測試法</td><td>偏光圖：一眼看上方、一眼看下方圖案</td><td>同時測雙眼感知；需偏光設備</td></tr>
+      <tr><td>紅綠測試法</td><td>紅綠背景上分別檢測雙眼，調整到紅綠清晰度一致</td><td>細微屈光度差異的校正</td></tr>
+      <tr><td>融合十字測試</td><td>同時看兩個互相垂直的線條，依反應調整</td><td>交替聚焦時的平衡感；FCC 也用於近距與老花加入度</td></tr>
+      <tr><td>馬篤式鏡平衡法</td><td>Maddox 桿與光源：線與光點是否對齊，以稜鏡調整</td><td>高精度雙眼協調，評估矯正下的眼位</td></tr>
+      <tr><td>稜鏡分離法</td><td>兩眼放不同方向稜鏡，分離成兩個影像後比較</td><td>高精度屈光矯正；本課程的標準作法</td></tr></table></div>
+  </section>
+
+  <section class="block">
+    <h2>紀錄方式 <span class="tag">RECORD</span></h2>
+    <div class="rec"># 正常範例
+Bal (Prism Diss.): fog +0.75；3ΔBU OD / 3ΔBD OS
+OD 較清 → OD +0.25 → 雙眼等模糊，達平衡
+Post-bal: OD −2.00 −0.50 ×178   OS −1.75 −0.75 ×172
+# 異常範例
+Bal: 加至 OS +0.75 仍無法等模糊 → 保留主利眼 OD 稍清
+※ 必填：平衡方式、霧視量、稜鏡量與方向、調整量、主利眼</div>
+  </section>
+
+  <section class="block">
+    <h2>雙眼平衡常見操作錯誤 <span class="tag">MISTAKES</span></h2>
+    <div class="myths">
+      <details class="myth"><summary>不用霧視，直接比較兩眼。</summary><div class="fix">兩眼都太清楚，病人無法比較模糊程度。</div></details>
+      <details class="myth"><summary>模糊那眼加正度數。</summary><div class="fix">方向反了，差距越拉越大。在較清楚那眼加正。</div></details>
+      <details class="myth"><summary>稜鏡放一點點就好。</summary><div class="fix">量不足沒拉開，兩行重疊，病人其實只看到一行。拉不開可以多加一點。</div></details>
+      <details class="myth"><summary>問「哪一行比較好」。</summary><div class="fix">問哪一行比較清晰。</div></details>
+      <details class="myth"><summary>平衡完就直接做雙眼 MPMVA。</summary><div class="fix">先移除稜鏡，否則後續視力與處方全部錯誤。</div></details>
+      <details class="myth"><summary>無法平衡時隨便讓一眼清楚。</summary><div class="fix">留給主利眼；留給非主利眼會讓主導感錯亂。</div></details>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>實驗課對照 <span class="tag">LAB PAIRING</span></h2>
+    <p class="sub">正課和《視光學實驗（一）》同一週進行。這裡搞懂「為什麼」，實驗課練「怎麼做」；兩邊的紀錄格式一樣，數據可以互相對照。</p>
+    <div id="pair"></div>
+  </section>
+
+  <section class="block">
+    <h2>觀念檢核 <span class="tag">CHECK</span></h2>
+    <p class="sub">選項順序每次都會打亂。答對八成以上，這一週就會在首頁亮綠燈。</p>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="block">
+    <h2>專業英文 <span class="tag">TERMS</span></h2>
+    <div id="terms"></div>
+  </section>
+
+  <nav id="pager"></nav>
+</main>
+<footer id="footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/practice.js"></script>
+<script src="assets/problems/calc.js"></script>
+<script src="assets/bank/w15.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { OL.pair("pair", "w15", ["以三種方法做雙眼平衡：稜鏡分離、交替遮蓋、紅綠（或偏光）", "比較三種方法的感受與結果差異", "記錄：平衡方式、霧視量、稜鏡量與方向、調整量、主利眼"]); });</script>
+<script>
+(function () {
+  const { order, drill, fmt } = OL;
+  OL.levels("levels", [
+    ["◆", "稜鏡分離法：霧視 +0.75 → OD 3BU／OS 3BD → 清楚那眼 +0.25", ""],
+    ["◆", "OD BU 的影像在下、OS BD 的在上", ""],
+    ["◆", "同時視 → 融像 → 立體視", ""],
+    ["○", "六種平衡方法", ""],
+  ]);
+
+  /* ---------- LAB 15-1 ---------- */
+  const VAS = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2];
+  let P, logs, prism, foggedTotal;
+  const blurOf = (e) => P.lens[e] - P.need[e];          // > 0：太正（霧）
+  const vaOf = (e) => { const b = Math.max(0, blurOf(e)); const v = Math.pow(10, -(-0.08 + 0.4 * b)); return VAS.reduce((a, x) => (x <= v + 1e-6 ? x : a), 0.2); };
+  function newP() {
+    const base = -[1, 1.5, 2, 2.5][Math.floor(Math.random() * 4)];
+    const kind = Math.floor(Math.random() * 4);   // 0：OD 多負 0.25；1：OS 多負 0.5；2：已平衡；3：差 0.125，無法完全平衡
+    const odOff = [-0.25, 0, 0, -0.125][kind], osOff = [0, -0.5, 0, 0][kind];
+    P = { need: { OD: base, OS: base + 0.25 }, lens: { OD: base + odOff, OS: base + 0.25 + osOff }, dom: Math.random() < 0.6 ? "OD" : "OS", kind };
+    prism = false; foggedTotal = 0; logs = [`單眼結果：OD ${fmt.s(P.lens.OD)}　OS ${fmt.s(P.lens.OS)}　主利眼 ${P.dom}`];
+    document.getElementById("bb-v").textContent = ""; say("—"); draw();
+  }
+  function say(t) { document.getElementById("bb-say").textContent = t; }
+  function draw() {
+    document.getElementById("bb-od").textContent = fmt.s(P.lens.OD, P.lens.OD * 8 % 2 ? 3 : 2) + " DS";
+    document.getElementById("bb-os").textContent = fmt.s(P.lens.OS) + " DS";
+    document.getElementById("bb-pr").textContent = prism ? "OD 3Δ BU／OS 3Δ BD" : "—";
+    const bOD = Math.max(0, blurOf("OD")), bOS = Math.max(0, blurOf("OS"));
+    const W = 420, H = 220;
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="病人看到的視標"><rect x="20" y="10" width="380" height="200" rx="8" fill="#fff" stroke="var(--line)"/><defs><filter id="bod"><feGaussianBlur stdDeviation="${(bOD * 2.4).toFixed(2)}"/></filter><filter id="bos"><feGaussianBlur stdDeviation="${(bOS * 2.4).toFixed(2)}"/></filter></defs>`;
+    const row = (y, f, op) => `<g filter="url(#${f})" opacity="${op}"><text x="210" y="${y}" text-anchor="middle" font-size="34" font-weight="700" fill="#111" font-family="var(--font-mono)">E H Z P</text></g>`;
+    if (prism) s += row(80, "bos", 1) + row(160, "bod", 1) + `<text x="30" y="80" font-size="10" fill="var(--muted)">上</text><text x="30" y="160" font-size="10" fill="var(--muted)">下</text>`;
+    else s += row(118, "bod", 0.55) + row(122, "bos", 0.55);
+    document.getElementById("bb-svg").innerHTML = s + "</svg>";
+    document.getElementById("bb-log").textContent = logs.join("\n"); document.getElementById("bb-log").scrollTop = 1e6;
+  }
+  function ask() {
+    if (!prism) { say(`「（雙眼）大概看得到 ${Math.min(vaOf("OD"), vaOf("OS"))} 那一行。」`); return; }
+    const d = blurOf("OD") - blurOf("OS");   // > 0：OD 較糊
+    if (Math.min(blurOf("OD"), blurOf("OS")) < 0.3) { say("「兩行都很清楚耶，看不出哪個比較清楚。」"); return; }
+    if (Math.abs(d) < 0.1) say("「上下兩行一樣模糊。」");
+    else say(d > 0 ? "「上面那行比較清楚。」" : "「下面那行比較清楚。」");
+  }
+  document.getElementById("bb-fog").onclick = () => { P.lens.OD += 0.75; P.lens.OS += 0.75; foggedTotal += 0.75; logs.push("雙眼 +0.75 霧視"); draw(); ask(); };
+  document.getElementById("bb-fog2").onclick = () => { P.lens.OD += 0.25; P.lens.OS += 0.25; foggedTotal += 0.25; logs.push("雙眼再 +0.25"); draw(); ask(); };
+  document.getElementById("bb-pin").onclick = () => { prism = true; logs.push("放入 OD 3ΔBU／OS 3ΔBD"); draw(); ask(); };
+  document.getElementById("bb-pout").onclick = () => { prism = false; logs.push("移除稜鏡"); draw(); say("（稜鏡已移除）"); };
+  document.getElementById("bb-r").onclick = () => { P.lens.OD += 0.25; logs.push("OD +0.25"); draw(); ask(); };
+  document.getElementById("bb-l").onclick = () => { P.lens.OS += 0.25; logs.push("OS +0.25"); draw(); ask(); };
+  document.getElementById("bb-end").onclick = () => {
+    const d = blurOf("OD") - blurOf("OS"), issues = [];
+    if (foggedTotal < 0.75) issues.push("沒有先霧視");
+    if (prism) issues.push("忘了移除稜鏡");
+    let bal;
+    if (Math.abs(d) < 0.1) bal = '<span class="pill ok">雙眼等模糊</span>';
+    else if (Math.abs(d) <= 0.13) { const clearer = d > 0 ? "OS" : "OD"; bal = clearer === P.dom ? '<span class="pill ok">無法完全平衡，主利眼稍清——正確</span>' : `<span class="pill bad">稍清的是非主利眼 ${clearer}</span> 應讓主利眼 ${P.dom} 稍清`; }
+    else bal = `<span class="pill bad">還沒平衡</span> ${d > 0 ? "OS" : "OD"} 明顯較清楚`;
+    document.getElementById("bb-v").innerHTML = bal + (issues.length ? `　<span class="pill warn">${issues.join("、")}</span>` : "") + `　接下來：雙眼一起收回霧視（雙眼 MPMVA）。`;
+  };
+  document.getElementById("bb-new").onclick = newP; newP();
+
+  /* ---------- LAB 15-2 ---------- */
+  order("o152", ["同時視 Simultaneous perception", "融像 Fusion", "立體視 Stereopsis"], { first: "基礎", last: "最高階段" });
+  drill("d152", ["同時視", "融像", "立體視"], [
+    { q: "右眼影像一直被抑制，只有左眼在看。", a: 0, why: "兩眼沒有同時接收影像。" },
+    { q: "兩眼都看得到，但一直看到兩個影像（複視）。", a: 1, why: "大腦沒能融合成單一影像。" },
+    { q: "看得到也不會重影，但穿針、倒水時對不準距離。", a: 2, why: "精細立體視不足。" },
+    { q: "屈光參差 3.00 D，兩眼影像大小差太多，融合困難。", a: 1, why: "感覺融像需要兩眼影像大小、清晰度相近。" },
+  ], { unit: "症狀" });
+  drill("d153", ["交替遮蓋法", "偏光測試法", "紅綠測試法", "融合十字測試", "馬篤式鏡平衡法", "稜鏡分離法"], [
+    { q: "初次配鏡，想快速確認雙眼矯正後沒有明顯抑制。", a: 0, why: "交替遮蓋，最簡單。" },
+    { q: "投影機有偏光視標，想在雙眼同時開著的情況下比較。", a: 1, why: "偏光：一眼看上、一眼看下。" },
+    { q: "細微的屈光度差異校正，用紅綠背景。", a: 2, why: "紅綠平衡。" },
+    { q: "也常用在近距調節反應與老花加入度。", a: 3, why: "融合十字（FCC）。" },
+    { q: "要同時評估矯正下的眼位（線與光點對不對齊）。", a: 4, why: "馬篤式鏡。" },
+    { q: "本課程的標準作法：3BU／3BD，比較上下兩行。", a: 5, why: "稜鏡分離法。" },
+  ], { unit: "情境" });
+  drill("d154", ["主利眼是右眼", "主利眼是左眼", "窗口縮小重測"], [
+    { q: "遮住右眼，病人說還看得到目標。", a: 1, why: "看得到的是沒被遮的左眼 → 主利眼為左眼。" },
+    { q: "遮住左眼，病人說還看得到目標。", a: 0, why: "主利眼為右眼。" },
+    { q: "遮住右眼，病人說目標不見了。", a: 0, why: "被遮的右眼才是主利眼。" },
+    { q: "反覆測三次，兩邊各一半。", a: 2, why: "請病人把窗口縮小後重測。" },
+  ], { unit: "結果" });
+})();
+</script>
+</body>
+</html>
