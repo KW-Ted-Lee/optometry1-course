@@ -23,7 +23,7 @@
   <section class="block">
     <h2>學習目標 <span class="tag">GOALS</span></h2>
     <ul class="goals">
-      <li>知道兩次大考的形式與時間，理解平時成績 A、B 兩方案的擇優規則。</li>
+      <li>說出一次完整驗光的三個階段，以及它們在整學期中的位置。</li>
       <li>說得出視光學的字源、發展階段，以及臨床技術的基本要求。</li>
       <li>完成一次結構完整的問診，並以標準格式寫下主訴、需求與病史。</li>
     </ul>
@@ -46,17 +46,6 @@
       <div class="concept"><span class="en-term">Visual dysfunction</span><h3>視覺功能障礙的四種型態</h3><p><b>視力低下</b>：慢性（幼兒多屈光不正、成人可能老花或白內障）或急性（常為器質性，多伴紅腫熱痛）。<b>視野缺損</b>：中心暗點→黃斑；弓形→青光眼早期。<b>視物變形</b>：網膜異常。<b>色覺異常</b>：先天或後天。</p></div>
       <div class="concept"><span class="en-term">Pain &amp; others</span><h3>疼痛與其他症狀</h3><p>頭痛：<b>一早起床就痛</b>通常和眼睛無關；<b>下午才加劇</b>要考慮眼鏡不合適。流淚是眼表刺激淚腺；<b>溢淚</b>是排出管道不順，不一定是分泌太多。乾眼可能是症狀也可能是疾病。</p></div>
       <div class="concept"><span class="lvtag lv-o">○ 知道即可</span><span class="en-term">Trivia</span><h3>眼鏡與手術的祖先</h3><p>據考據，最早的眼鏡來自<b>珠寶業</b>，而手術來自<b>理髮師</b>。本課程對應學生核心能力 A（基礎醫學科學能力），實驗（一）則以核心能力 B 的操作面為主。</p></div>
-    </div>
-  </section>
-
-  <section class="block">
-    <h2>課程資訊 <span class="tag">GRADING</span></h2>
-    <p class="sub">期中考 30%（第 9 週，紙筆）、期末考 30%（第 18 週，紙筆為主）、平時成績 40%。平時成績有兩個方案，<b>不必預先選擇，學期結算時自動擇高</b>。輸入看看：</p>
-    <div class="sim" style="border:1px solid var(--line);border-radius:12px">
-      <div class="formula"><b>A 方案</b><code>數位平台完成度 × 30% ＋ 小考 × 10%</code><span class="calc">平台 <input type="number" id="g-plat" min="0" max="100" value="90"> 小考 <input type="number" id="g-quiz" min="0" max="100" value="70"></span></div>
-      <div class="formula"><b>B 方案</b><code>（期中 ＋ 期末）÷ 2 × 40%</code><span class="calc">期中 <input type="number" id="g-mid" min="0" max="100" value="68"> 期末 <input type="number" id="g-fin" min="0" max="100" value="74"></span></div>
-      <div class="readout"><div class="row"><span>A 方案平時分</span><b id="g-a">—</b></div><div class="row"><span>B 方案平時分</span><b id="g-b">—</b></div><div class="row"><span>學期總成績</span><b id="g-t">—</b></div></div>
-      <div class="verdict" id="g-v"></div>
     </div>
   </section>
 
@@ -177,18 +166,6 @@ POH: 6 年前配鏡，未再更換。無眼疾史。PMH: 否認 DM/HTN。
     ["◆", "需要立即轉介的主訴", "急性、單眼、紅腫熱痛、視野或形狀改變"],
     ["○", "視光學字源與發展", "Optos + Metron"],
   ]);
-
-  /* ---------- 成績擇優 ---------- */
-  const g = (id) => Math.max(0, Math.min(100, +document.getElementById(id).value || 0));
-  function grade() {
-    const A = g("g-plat") * 0.3 + g("g-quiz") * 0.1, B = (g("g-mid") + g("g-fin")) / 2 * 0.4, best = Math.max(A, B);
-    const T = g("g-mid") * 0.3 + g("g-fin") * 0.3 + best;
-    document.getElementById("g-a").textContent = A.toFixed(1) + " / 40";
-    document.getElementById("g-b").textContent = B.toFixed(1) + " / 40";
-    document.getElementById("g-t").textContent = T.toFixed(1);
-    document.getElementById("g-v").innerHTML = `系統自動採用 <span class="pill ok">${A >= B ? "A 方案" : "B 方案"}</span>　${A >= B ? "平台完成度在幫你加分，繼續保持。" : "考試表現比平台完成度好；把平台做完，A 方案還有機會更高。"}`;
-  }
-  ["g-plat", "g-quiz", "g-mid", "g-fin"].forEach((id) => document.getElementById(id).addEventListener("input", grade)); grade();
 
   /* ---------- LAB 1-1 ---------- */
   const SEVEN = ["頻率", "起始時間", "患部", "持續時間", "伴隨症狀", "舒緩條件", "程度"];

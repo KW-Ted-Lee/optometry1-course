@@ -212,8 +212,8 @@
   const axc = (a) => `var(--ax${a})`;
   const STARS = { 1: "視力 ＝ 測試距離 ÷ 設計距離", 2: "四種視力寫法互換", 3: "視標高度", 4: "M-unit", 5: "屈光力 D ＝ n ÷ f", 6: "遠點距離", 7: "正負散換算", 8: "等價球面", 9: "調節幅度 AA", 10: "Hofstetter 最小值", 11: "三十法則", 12: "JCC 球面補償", 13: "主子午線 → 處方" };
   const STARW = { w02: [1], w03: [2, 3, 4], w04: [5, 6], w05: [7, 8], w06: [9, 10], w11: [11], w12: [12], w14: [13] };
-  const SHORT = { w01: "導論與問診", w02: "視力檢查", w03: "視標換算", w04: "近視", w05: "散光與光學十字", w06: "遠視與調節", w07: "MPMVA", w08: "期中複習",
-    w09: "期中考站", w10: "驗光流程", w11: "鐘面圖", w12: "JCC", w13: "微小散光", w14: "裂孔板", w15: "雙眼平衡", w16: "處方決定", w17: "期末複習", w18: "期末考站" };
+  const SHORT = { w01: "導論與問診", w02: "視力檢查", w03: "視標換算", w04: "近視", w05: "散光與光學十字", w06: "遠視與調節", w07: "MPMVA", w08: "前半總複習",
+    w09: "前半總站", w10: "驗光流程", w11: "鐘面圖", w12: "JCC", w13: "微小散光", w14: "裂孔板", w15: "雙眼平衡", w16: "處方決定", w17: "後半總複習", w18: "後半總站" };
   const LABN = OL.WEEKS.reduce((a, w) => a + w.labs.length, 0);
   const STATUS = ["未出發", "探索中", "完成", "精熟"];
   const PASS = 0.8;
@@ -316,7 +316,7 @@
       <text x="${c}" y="${c + 5}" text-anchor="middle" font-family="var(--font-mono)" font-size="14" fill="${pass ? "var(--surface)" : "var(--ink)"}">${String(x.w.wk).padStart(2, "0")}</text>${crown}</svg>`;
   }
   function stationLabel(x) {
-    if (x.cp) return `${x.wk === 9 ? "W09 期中考站" : "W18 期末考站"}，完成度 ${Math.round(x.pct * 100)}%`;
+    if (x.cp) return `${x.wk === 9 ? "前半學期總站" : "後半學期總站"}，完成度 ${Math.round(x.pct * 100)}%`;
     return `${wkLabel(x.w)} ${x.w.zh}，${STATUS[x.status]}：實驗 ${x.labsN}/4，觀念檢核${x.q ? ` ${x.q.correct}/${x.q.total}` : "未作答"}`;
   }
   function renderMap() {
@@ -359,7 +359,7 @@
     const starLi = (n) => { const r = D.S[n] || { ok: 0, tries: 0 }; const m = D.starM(n);
       return `<li><span class="m ${m ? "ok" : r.ok ? "half" : ""}">${m ? "✓" : r.ok ? "◐" : "○"}</span><span><a href="calc.html#s${n}">★${n} ${STARS[n]}</a><small>${m ? "已精熟" : r.tries ? `全對 ${Math.min(r.ok, STAR_NEED)} / ${STAR_NEED} 組` : "還沒練習"}</small></span></li>`; };
     if (x.cp) {
-      el.innerHTML = `<div class="detail-head"><span class="wk">${x.wk === 9 ? "W09" : "W18"}</span><h3>${x.wk === 9 ? "期中考站（W01–W08）" : "期末考站（W10–W17）"}</h3><a class="btn" href="exam.html">去綜合挑戰 →</a></div>
+      el.innerHTML = `<div class="detail-head"><span class="wk">${x.wk === 9 ? "前半" : "後半"}</span><h3>${x.wk === 9 ? "前半學期總站（W01–W08）" : "後半學期總站（W10–W17）"}</h3><a class="btn" href="exam.html">去綜合挑戰 →</a></div>
         <div class="dgrid">
           <div><h4>範圍內各週</h4><ul class="checklist">${x.ws.map((y) => `<li><span class="m ${y.status === 3 ? "ok" : y.status ? "half" : ""}">${y.status === 3 ? "✓" : y.status ? "◐" : "○"}</span><span><a href="${y.w.id}.html">${wkLabel(y.w)} ${esc(SHORT[y.w.id])}</a><small>${STATUS[y.status]}・${Math.round(y.pct * 100)}%</small></span></li>`).join("")}</ul></div>
           <div><h4>範圍內的 ★ 計算</h4><ul class="checklist">${x.stars.map(starLi).join("")}</ul></div>

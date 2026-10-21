@@ -14,9 +14,7 @@ OL.bank("w08", {
     { q: "正負散換算的第一步是：", opts: ["柱面變號", "軸度加 90", "球面加柱面", "求 SE"], a: 2, exp: "最常被漏掉的一步。" },
   ],
   terms: [
-    ["midterm examination", "期中考", "第 9 週"],
     ["formula sheet", "公式總表", ""],
     ["expected value", "期望值", "如 Hofstetter"],
-    ["practical examination", "技術考", "實驗課 W08–W09"],
   ],
 });

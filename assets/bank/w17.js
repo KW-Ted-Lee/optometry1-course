@@ -12,7 +12,6 @@ OL.bank("w17", {
     { q: "立體視的前一個階段是：", opts: ["同時視", "融像", "調節", "抑制"], a: 1, exp: "同時視 → 融像 → 立體視。" },
   ],
   terms: [
-    ["final examination", "期末考", "第 18 週"],
     ["routine refraction", "常規驗光", "七步驟"],
     ["endpoint criteria", "終點判準", ""],
   ],

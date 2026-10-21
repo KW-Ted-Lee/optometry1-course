@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  /* 週次：依《視光學（一）》18 週課綱（W09 期中考、W18 期末考不另做頁面）
+  /* 週次：依《視光學（一）》16 週授課內容
      axis：0 導論與問診、1 視力與視標、2 屈光不正、3 自覺式驗光技術、4 雙眼平衡與處方
      kind：lec 講授、rev 考前複習
      lab：同週《視光學實驗（一）》的實作主題（兩邊課程互相對照） */
@@ -31,8 +31,8 @@
     { id: "w07", wk: 7, axis: 3, kind: "lec", zh: "MPMVA：定義、終點判定、常見錯誤", en: "Maximum Plus to Maximum VA",
       lab: "綜合驗光儀設定與單眼 MPMVA、紅綠測試",
       labs: ["綜合驗光儀輔助鏡代號", "單眼 MPMVA 模擬", "紅綠測試與色像差", "三種終點怎麼選"] },
-    { id: "w08", wk: 8, axis: 3, kind: "rev", zh: "期中考前複習", en: "Midterm Review (W01–W07)",
-      lab: "期中技術考（W08–W09）",
+    { id: "w08", wk: 8, axis: 3, kind: "rev", zh: "前半學期總複習", en: "First-Half Review (W01–W07)",
+      lab: "前半學期操作總整理",
       labs: ["公式總表：即時計算", "六個失分陷阱", "紀錄格式找錯"] },
     { id: "w10", wk: 10, axis: 3, kind: "lec", zh: "普通驗光流程總覽", en: "Routine Subjective Refraction",
       lab: "全流程串接與主利眼測試",
@@ -55,8 +55,8 @@
     { id: "w16", wk: 16, axis: 4, kind: "lec", zh: "一般驗光的最終處方決定", en: "Final Prescription Decisions",
       lab: "完整驗光並填寫處方單",
       labs: ["處方要不要調整？", "三道檢核", "處方單找漏", "開處方還是轉介？"] },
-    { id: "w17", wk: 17, axis: 4, kind: "rev", zh: "期末考前複習", en: "Final Review (W10–W16)",
-      lab: "期末技術考（W17–W18）",
+    { id: "w17", wk: 17, axis: 4, kind: "rev", zh: "後半學期總複習", en: "Second-Half Review (W10–W16)",
+      lab: "後半學期操作總整理",
       labs: ["七步驟與終點判準", "四項技術速查", "後半學期六個陷阱"] },
   ];
   const AXES = [
@@ -139,7 +139,7 @@
       const exam = (a, b) => (a && b && b.wk - a.wk > 1) ? "" : "";
       pager.innerHTML =
         (prev ? `<a class="prev" href="${prev.id}.html"><small>← 上一週</small>${wkLabel(prev)}　${prev.zh}</a>` : `<a class="prev" href="index.html"><small>← 回到</small>課程首頁</a>`) +
-        (next ? `<a class="next" href="${next.id}.html"><small>下一週 →${next.wk - WEEKS[i].wk > 1 ? "（中間是期中考）" : ""}</small>${wkLabel(next)}　${next.zh}</a>` : `<a class="next" href="exam.html"><small>學期最後一週 →</small>綜合挑戰</a>`);
+        (next ? `<a class="next" href="${next.id}.html"><small>下一週 →</small>${wkLabel(next)}　${next.zh}</a>` : `<a class="next" href="exam.html"><small>學期最後一週 →</small>綜合挑戰</a>`);
     }
     const foot = document.getElementById("footer");
     if (foot) {

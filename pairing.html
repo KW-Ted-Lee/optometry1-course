@@ -54,7 +54,7 @@
     <div class="concepts">
       <div class="concept"><span class="en-term">Before lab</span><h3>上實驗課之前</h3><p>先到本平台同一週，操作互動實驗、做觀念檢核。尤其 W07、W11–W15 的模擬病人，就是實驗課要做的流程。</p></div>
       <div class="concept"><span class="en-term">After lab</span><h3>實驗課之後</h3><p>把實際量到的數據（PD、AA、鐘面圖軸度、JCC 終點）帶回來，和互動實驗的結果、Hofstetter 期望值對照，寫進作業。</p></div>
-      <div class="concept"><span class="en-term">Same record format</span><h3>同一套紀錄格式</h3><p>每週頁面的「紀錄方式」和實驗課紀錄單一致；期中、期末技術考都會檢核紀錄完整性。</p></div>
+      <div class="concept"><span class="en-term">Same record format</span><h3>同一套紀錄格式</h3><p>每週頁面的「紀錄方式」和實驗課紀錄單一致；正課與實驗課用同一套格式，數據可以互相對照。</p></div>
     </div>
   </section>
 </main>
@@ -69,13 +69,11 @@
   const pname = ((window.OB_CONFIG || {}).partner || {}).name || "實驗課平台";
   const rows = [];
   WEEKS.forEach((w) => {
-    if (w.wk === 10) rows.push(`<div class="prow exam"><div class="wk">W09<small>期中</small></div><div class="plec"><small>正課</small><b>期中考（紙筆）</b><ul><li>範圍 W01–W07，占 30%</li></ul></div><div class="plab"><small>實驗課</small><b>期中技術考（續）</b><ul><li>以操作評分，紀錄完整性為評分項目之一</li></ul></div></div>`);
     const url = partnerURL(w.id);
     rows.push(`<div class="prow"><div class="wk">${wkLabel(w)}${w.kind === "rev" ? "<small>複習</small>" : ""}</div>
       <div class="plec"><small>正課</small><b>${esc(w.zh)}</b><ul>${w.labs.map((t) => `<li>${t}</li>`).join("")}</ul><a class="go" href="${w.id}.html">打開本週頁面 →</a></div>
       <div class="plab"><small>實驗課</small><b>${esc(w.lab)}</b><ul>${(PAIRS[w.id] || []).map((t) => `<li>${t}</li>`).join("")}</ul>${url ? `<a class="go" href="${url}">前往${esc(pname)} →</a>` : `<span class="go" style="color:var(--muted)">${esc(pname)}即將上線</span>`}</div></div>`);
   });
-  rows.push(`<div class="prow exam"><div class="wk">W18<small>期末</small></div><div class="plec"><small>正課</small><b>期末考（紙筆為主）</b><ul><li>以 W10–W16 為主、含前半基礎，占 30%</li></ul></div><div class="plab"><small>實驗課</small><b>期末技術考（續）</b><ul><li>完整驗光與處方單</li></ul></div></div>`);
   document.getElementById("pt").innerHTML = rows.join("");
   const U = [["問診與記錄", "w01"], ["瞳孔距離測量", "w01"], ["裸眼視力量測與記錄", "w02"], ["電腦驗光機操作", "w04"], ["針孔檢查", "w02"], ["雲霧檢查法", "w07"], ["綜合驗光儀設定與操作", "w07"], ["輔助輪名稱與功能", "w07"], ["球面度測量 MPMVA", "w07"], ["遠方單眼自覺式驗光", "w10"], ["紅綠雙色法", "w07"], ["主利眼測試", "w10"]];
   document.getElementById("units").innerHTML = U.map(([t, id]) => { const w = WEEKS.find((x) => x.id === id); return `<div><b>${wkLabel(w)}</b>${t}　<a href="${id}.html">原理 →</a></div>`; }).join("");
